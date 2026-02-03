@@ -1,0 +1,77 @@
+﻿using GestionPeliculas.Model;
+using System.Net.Http;
+using System.Net.Http.Json;
+using Newtonsoft.Json;
+
+namespace GestionPeliculas.Service
+{
+    public class PeliculasService
+    {
+        private readonly HttpClient client;
+
+        public PeliculasService(HttpClient client)
+        {
+            this.client = client ?? new HttpClient();
+        }
+
+        public PeliculasService()
+        {
+            this.client = new HttpClient();
+        }
+
+        // GET: api/peliculas
+        public async Task<List<Pelicula>> GetPeliculasAsync()
+        {
+            try
+            {
+                var response = await client.GetAsync("http://10.0.2.2:7013/api/Peliculas");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = await response.Content.ReadAsStringAsync();
+                    System.Diagnostics.Debug.WriteLine($"Respuesta: {json}");
+
+                    return JsonConvert.DeserializeObject<List<Pelicula>>(json) ?? new List<Pelicula>();
+                }
+                else
+                {
+                    var errorContent = await response.Content.ReadAsStringAsync();
+                    throw new HttpRequestException($"Error {response.StatusCode}: {errorContent}");
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"EXCEPCIÓN: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"Stack: {ex.StackTrace}");
+                throw;
+            }
+        }
+
+        // GET: api/peliculas/{id}
+        public async Task<Pelicula?> GetPeliculaAsync(int id)
+        {
+            return await client.GetFromJsonAsync<Pelicula>($"http://10.0.2.2:7013/api/peliculas/{id}");
+        }
+
+        // POST: api/peliculas
+        public async Task<bool> CrearPeliculaAsync(Pelicula pelicula)
+        {
+            var response = await client.PostAsJsonAsync("http://10.0.2.2:7013/api/peliculas", pelicula);
+            return response.IsSuccessStatusCode;
+        }
+
+        // PUT: api/peliculas/{id}
+        public async Task<bool> ActualizarPeliculaAsync(int id, Pelicula pelicula)
+        {
+            var response = await client.PutAsJsonAsync($"http://10.0.2.2:7013/api/peliculas/{id}", pelicula);
+            return response.IsSuccessStatusCode;
+        }
+
+        // DELETE: api/peliculas/{id}
+        public async Task<bool> EliminarPeliculaAsync(int id)
+        {
+            var response = await client.DeleteAsync($"http://10.0.2.2:7013/api/peliculas/{id}");
+            return response.IsSuccessStatusCode;
+        }
+    }
+}

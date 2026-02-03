@@ -1,0 +1,168 @@
+﻿using GestionPeliculas.Model;
+using GestionPeliculas.Service;
+
+namespace GestionPeliculas.Pages;
+
+public partial class OpcionesPage : ContentPage
+{
+    private readonly PeliculasService _service;
+
+    public OpcionesPage(PeliculasService service)
+    {
+        InitializeComponent();
+        _service = service;
+    }
+
+    public void ShowListOnly()
+    {
+        ResultsList.IsVisible = true;
+        CreateSection.IsVisible = false;
+        ManageByIdSection.IsVisible = false;
+    }
+
+    public void ShowCreateOnly()
+    {
+        ResultsList.IsVisible = false;
+        CreateSection.IsVisible = true;
+        ManageByIdSection.IsVisible = false;
+    }
+
+    public void ShowManageById()
+    {
+        ResultsList.IsVisible = false;
+        CreateSection.IsVisible = false;
+        ManageByIdSection.IsVisible = true;
+    }
+
+    private async void OnListarClicked(object sender, EventArgs e)
+    {
+        try
+        {
+            var list = await _service.GetPeliculasAsync();
+            ResultsList.ItemsSource = list;
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", ex.Message, "OK");
+        }
+    }
+
+    private async void OnCrearClicked(object sender, EventArgs e)
+    {
+        if (!int.TryParse(Crear_Anho.Text, out var anho)) anho = 0;
+
+        var p = new Pelicula
+        {
+            Titulo = Crear_Titulo.Text ?? string.Empty,
+            Director = Crear_Director.Text ?? string.Empty,
+            Genero = Crear_Genero.Text ?? string.Empty,
+            AnhoLanzamiento = anho,
+            RutaImagen = Crear_RutaImagen.Text
+        };
+
+        try
+        {
+            var ok = await _service.CrearPeliculaAsync(p);
+            await DisplayAlert("Crear", ok ? "Creada correctamente" : "Fallo al crear", "OK");
+            if (ok) await RefreshList();
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", ex.Message, "OK");
+        }
+    }
+
+    private async void OnObtenerClicked(object sender, EventArgs e)
+    {
+        if (!int.TryParse(IdEntry.Text, out var id))
+        {
+            await DisplayAlert("Error", "Id inválido", "OK");
+            return;
+        }
+
+        try
+        {
+            var p = await _service.GetPeliculaAsync(id);
+            if (p is null)
+            {
+                await DisplayAlert("No encontrado", "No existe la película", "OK");
+                return;
+            }
+
+            // Rellenar campos de edición
+            Editar_Titulo.Text = p.Titulo;
+            Editar_Director.Text = p.Director;
+            Editar_Genero.Text = p.Genero;
+            Editar_Anho.Text = p.AnhoLanzamiento.ToString();
+            Editar_RutaImagen.Text = p.RutaImagen;
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", ex.Message, "OK");
+        }
+    }
+
+    private async void OnActualizarClicked(object sender, EventArgs e)
+    {
+        if (!int.TryParse(IdEntry.Text, out var id))
+        {
+            await DisplayAlert("Error", "Id inválido", "OK");
+            return;
+        }
+
+        if (!int.TryParse(Editar_Anho.Text, out var anho)) anho = 0;
+
+        var p = new Pelicula
+        {
+            Id = id,
+            Titulo = Editar_Titulo.Text ?? string.Empty,
+            Director = Editar_Director.Text ?? string.Empty,
+            Genero = Editar_Genero.Text ?? string.Empty,
+            AnhoLanzamiento = anho,
+            RutaImagen = Editar_RutaImagen.Text
+        };
+
+        try
+        {
+            var ok = await _service.ActualizarPeliculaAsync(id, p);
+            await DisplayAlert("Actualizar", ok ? "Actualizada" : "Fallo al actualizar", "OK");
+            if (ok) await RefreshList();
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", ex.Message, "OK");
+        }
+    }
+
+    private async void OnEliminarClicked(object sender, EventArgs e)
+    {
+        if (!int.TryParse(IdEntry.Text, out var id))
+        {
+            await DisplayAlert("Error", "Id inválido", "OK");
+            return;
+        }
+
+        var confirmar = await DisplayAlert("Eliminar", $"Eliminar película {id}?", "Sí", "No");
+        if (!confirmar) return;
+
+        try
+        {
+            var ok = await _service.EliminarPeliculaAsync(id);
+            await DisplayAlert("Eliminar", ok ? "Eliminada" : "Fallo al eliminar", "OK");
+            if (ok) await RefreshList();
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", ex.Message, "OK");
+        }
+    }
+
+    private async Task RefreshList()
+    {
+        try
+        {
+            ResultsList.ItemsSource = await _service.GetPeliculasAsync();
+        }
+        catch { /* Ignorar refresco en fallo */ }
+    }
+}

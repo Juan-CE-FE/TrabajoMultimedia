@@ -1,0 +1,68 @@
+﻿using Microsoft.Extensions.Logging;
+using GestionPeliculas.Pages;
+using GestionPeliculas.Service;
+
+namespace GestionPeliculas
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                });
+
+            // Configurar HttpClient CON AUTENTICACIÓN
+            builder.Services.AddHttpClient<PeliculasService>((serviceProvider, client) =>
+            {
+                // Usar HTTPS para el emulador Android cuando la API está configurada con certificado de desarrollo
+#if ANDROID
+                client.BaseAddress = new Uri("https://10.0.2.2:7013/");
+#else
+                client.BaseAddress = new Uri("https://localhost:7013/");
+#endif
+
+                // CONFIGURACIÓN DE AUTENTICACIÓN BÁSICA
+                var credentials = "juan:123";
+                var byteArray = System.Text.Encoding.UTF8.GetBytes(credentials);
+                var base64Credentials = Convert.ToBase64String(byteArray);
+
+                client.DefaultRequestHeaders.Authorization =
+                    new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", base64Credentials);
+
+                // Headers adicionales
+                client.DefaultRequestHeaders.Add("Accept", "application/json");
+                client.Timeout = TimeSpan.FromSeconds(30);
+            })
+            // En desarrollo sobre Android aceptar certificado de desarrollo (solo DEBUG)
+            .ConfigurePrimaryHttpMessageHandler(() =>
+            {
+#if DEBUG && ANDROID
+                return new HttpClientHandler
+                {
+                    // Aceptar cualquier certificado en desarrollo (no usar en producción)
+                    ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+                };
+#else
+                return new HttpClientHandler();
+#endif
+            });
+
+            // Registrar páginas (el servicio PeliculasService ya está registrado por AddHttpClient)
+            // Use transient so each navigation creates a fresh page instance and avoids UI references held by singleton
+            builder.Services.AddTransient<PeliculasPage>();
+
+#if DEBUG
+            builder.Logging.AddDebug();
+#endif
+
+            return builder.Build();
+        }
+    }
+}

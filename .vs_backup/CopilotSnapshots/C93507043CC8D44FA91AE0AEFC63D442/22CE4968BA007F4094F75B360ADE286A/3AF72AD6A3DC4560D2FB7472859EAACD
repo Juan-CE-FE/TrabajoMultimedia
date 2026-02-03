@@ -1,0 +1,47 @@
+﻿using GestionPeliculas.Service;
+using GestionPeliculas.Model;
+
+namespace GestionPeliculas.Pages
+{
+    public partial class PeliculasPage : ContentPage
+    {
+        private readonly PeliculasService _service;
+
+        public PeliculasPage(PeliculasService service)
+        {
+            InitializeComponent();
+            _service = service;
+        }
+
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            _ = LoadPeliculasAsync();
+        }
+
+        private async Task LoadPeliculasAsync()
+        {
+            try
+            {
+                var peliculas = await _service.GetPeliculasAsync();
+
+                if (ListaPeliculas != null)
+                {
+                    ListaPeliculas.ItemsSource = peliculas;
+                }
+                else
+                {
+                    System.Diagnostics.Debug.WriteLine("ListaPeliculas es null: revisar XAML x:Name");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Mostrar error simple y escribir en debug
+                System.Diagnostics.Debug.WriteLine($"Error cargando películas: {ex.Message}");
+                await DisplayAlert("Error", "No se pudieron cargar las películas. Revisa la conexión o la API.", "OK");
+            }
+        }
+
+    }
+}

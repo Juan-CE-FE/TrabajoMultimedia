@@ -1,0 +1,30 @@
+﻿using GestionPeliculas.Service;
+
+namespace GestionPeliculas.Pages
+{
+    public partial class PeliculasPage : ContentPage
+    {
+        private readonly PeliculasService _service;
+
+        public PeliculasPage(PeliculasService service)
+        {
+            InitializeComponent();
+            _service = service;
+        }
+
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            var servicio = new PeliculasService();
+            var peliculas = servicio.GetPeliculasAsync();
+            ListaPeliculas.ItemsSource = (System.Collections.IEnumerable)peliculas;
+        }
+
+
+
+
+
+
+    }
+}

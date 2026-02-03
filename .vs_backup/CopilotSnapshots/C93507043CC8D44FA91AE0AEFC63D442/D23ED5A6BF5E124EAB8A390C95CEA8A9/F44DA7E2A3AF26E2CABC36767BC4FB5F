@@ -1,0 +1,54 @@
+﻿using GestionPeliculas.Pages;
+using GestionPeliculas.Service;
+
+namespace GestionPeliculas.Pages;
+
+public partial class MainMenuPage : ContentPage
+{
+    private readonly PeliculasService _service;
+    private readonly IServiceProvider _services;
+
+    public MainMenuPage(PeliculasService service, IServiceProvider services)
+    {
+        InitializeComponent();
+        _service = service;
+        _services = services;
+    }
+
+    private async void OnListarAllClicked(object sender, EventArgs e)
+    {
+        var opciones = _services.GetService(typeof(OpcionesPage)) as OpcionesPage;
+        if (opciones != null)
+        {
+            await Navigation.PushAsync(opciones);
+            opciones.ShowListOnly();
+        }
+    }
+
+    private async void OnCrearClicked(object sender, EventArgs e)
+    {
+        var opciones = _services.GetService(typeof(OpcionesPage)) as OpcionesPage;
+        if (opciones != null)
+        {
+            await Navigation.PushAsync(opciones);
+            opciones.ShowCreateOnly();
+        }
+    }
+
+    private async void OnManageByIdClicked(object sender, EventArgs e)
+    {
+        var opciones = _services.GetService(typeof(OpcionesPage)) as OpcionesPage;
+        if (opciones != null)
+        {
+            await Navigation.PushAsync(opciones);
+            opciones.ShowManageById();
+        }
+    }
+
+    private async void OnGoToPeliculasPageClicked(object sender, EventArgs e)
+    {
+        var page = _services.GetService(typeof(PeliculasPage)) as Page;
+        if (page != null)
+            await Navigation.PushAsync(page);
+    }
+}

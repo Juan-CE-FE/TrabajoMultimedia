@@ -1,0 +1,66 @@
+﻿using GestionPeliculas.Model;
+using System.Net.Http;
+using System.Net.Http.Json;
+using Newtonsoft.Json;
+
+namespace GestionPeliculas.Service
+{
+    public class PeliculasService
+    {
+        private readonly HttpClient client;
+
+        public PeliculasService(HttpClient client)
+        {
+            this.client = client ?? new HttpClient();
+        }
+
+        // GET: api/peliculas
+        public async Task<List<Pelicula>> GetPeliculasAsync()
+        {
+            try
+            {
+                // Use relative path so BaseAddress configured in DI is applied
+                var peliculas = await client.GetFromJsonAsync<List<Pelicula>>("api/peliculas");
+                return peliculas ?? new List<Pelicula>();
+            }
+            catch (HttpRequestException ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"HTTP ERROR: {ex.Message}");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"EXCEPCIÓN: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"Stack: {ex.StackTrace}");
+                throw;
+            }
+        }
+
+        // GET: api/peliculas/{id}
+        public async Task<Pelicula?> GetPeliculaAsync(int id)
+        {
+            return await client.GetFromJsonAsync<Pelicula>($"api/peliculas/{id}");
+        }
+
+        // POST: api/peliculas
+        public async Task<bool> CrearPeliculaAsync(Pelicula pelicula)
+        {
+            var response = await client.PostAsJsonAsync("api/peliculas", pelicula);
+            return response.IsSuccessStatusCode;
+        }
+
+        // PUT: api/peliculas/{id}
+        public async Task<bool> ActualizarPeliculaAsync(int id, Pelicula pelicula)
+        {
+            var response = await client.PutAsJsonAsync($"api/peliculas/{id}", pelicula);
+            return response.IsSuccessStatusCode;
+        }
+
+        // DELETE: api/peliculas/{id}
+        public async Task<bool> EliminarPeliculaAsync(int id)
+        {
+            var response = await client.DeleteAsync($"api/peliculas/{id}");
+            return response.IsSuccessStatusCode;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionPeliculas.Pages.UpdatePeliculaPage"
+             Title="Actualizar Pelicula"
+             Padding="10">
+
+    <VerticalStackLayout Spacing="12">
+        <Entry x:Name="IdEntry" Placeholder="Id" Keyboard="Numeric" />
+        <Button Text="Cargar" Clicked="OnCargarClicked" />
+
+        <Entry x:Name="TituloEntry" Placeholder="Titulo" />
+        <Entry x:Name="DirectorEntry" Placeholder="Director" />
+        <Entry x:Name="GeneroEntry" Placeholder="Genero" />
+        <Entry x:Name="AnhoEntry" Placeholder="Anho" Keyboard="Numeric" />
+        <Entry x:Name="RutaImagenEntry" Placeholder="Ruta imagen (URL)" />
+
+        <Button Text="Actualizar" Clicked="OnActualizarClicked" />
+    </VerticalStackLayout>
+
+</ContentPage>

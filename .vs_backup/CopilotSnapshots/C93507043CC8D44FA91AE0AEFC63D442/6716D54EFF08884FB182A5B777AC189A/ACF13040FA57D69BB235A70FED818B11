@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionPeliculas.Pages.OpcionesPage"
+             Title="Opciones API"
+             Padding="10">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="12">
+
+            <Button Text="Listar peliculas" Clicked="OnListarClicked" />
+
+            <StackLayout x:Name="ResultsListContainer">
+                <CollectionView x:Name="ResultsList"
+                                ItemsLayout="VerticalList"
+                                HeightRequest="300">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="8" Margin="0,4" CornerRadius="8" BorderColor="#ddd">
+                                <HorizontalStackLayout Spacing="10">
+                                    <Image Source="{Binding RutaImagen}" WidthRequest="60" HeightRequest="90" Aspect="AspectFill"/>
+                                    <VerticalStackLayout>
+                                        <Label Text="{Binding Titulo}" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Director}" FontSize="12" TextColor="Gray"/>
+                                        <Label Text="{Binding Genero}" FontSize="12"/>
+                                        <Label Text="{Binding AnhoLanzamiento}" FontSize="12"/>
+                                    </VerticalStackLayout>
+                                </HorizontalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+
+            <!-- Crear -->
+            <StackLayout x:Name="CreateSection" IsVisible="False">
+                <Frame Padding="10" CornerRadius="8" BorderColor="#ccc">
+                    <VerticalStackLayout>
+                        <Label Text="Crear pelicula" FontAttributes="Bold"/>
+                        <Entry x:Name="Crear_Titulo" Placeholder="Titulo"/>
+                        <Entry x:Name="Crear_Director" Placeholder="Director"/>
+                        <Entry x:Name="Crear_Genero" Placeholder="Genero"/>
+                        <Entry x:Name="Crear_Anho" Placeholder="Anho" Keyboard="Numeric"/>
+                        <Entry x:Name="Crear_RutaImagen" Placeholder="RutaImagen (URL o recurso)"/>
+                        <Button Text="Crear" Clicked="OnCrearClicked"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </StackLayout>
+
+            <!-- Obtener por Id -->
+            <StackLayout x:Name="ManageByIdSection" IsVisible="False">
+                <Frame Padding="10" CornerRadius="8" BorderColor="#ccc">
+                    <VerticalStackLayout>
+                        <Label Text="Obtener / Actualizar / Eliminar por Id" FontAttributes="Bold"/>
+                        <HorizontalStackLayout Spacing="8">
+                            <Entry x:Name="IdEntry" Placeholder="Id" WidthRequest="120" Keyboard="Numeric"/>
+                            <Button Text="Obtener" Clicked="OnObtenerClicked"/>
+                            <Button Text="Eliminar" Clicked="OnEliminarClicked" BackgroundColor="#E57373" />
+                        </HorizontalStackLayout>
+
+                        <Label Text="(Si obtiene la entidad, puedes editar y pulsar Actualizar)" FontSize="12" TextColor="Gray"/>
+
+                        <Entry x:Name="Editar_Titulo" Placeholder="Titulo"/>
+                        <Entry x:Name="Editar_Director" Placeholder="Director"/>
+                        <Entry x:Name="Editar_Genero" Placeholder="Genero"/>
+                        <Entry x:Name="Editar_Anho" Placeholder="Anho" Keyboard="Numeric"/>
+                        <Entry x:Name="Editar_RutaImagen" Placeholder="RutaImagen"/>
+                        <Button Text="Actualizar" Clicked="OnActualizarClicked"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </StackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

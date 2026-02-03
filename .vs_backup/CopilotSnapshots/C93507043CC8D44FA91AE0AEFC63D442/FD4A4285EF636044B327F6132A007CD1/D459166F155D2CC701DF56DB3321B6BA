@@ -1,0 +1,16 @@
+﻿using GestionPeliculas.Pages;
+using Microsoft.Maui.Controls;
+
+namespace GestionPeliculas
+{
+    public partial class App : Application
+    {
+        public App(IServiceProvider serviceProvider)
+        {
+            InitializeComponent();
+
+            var peliculasPage = serviceProvider.GetRequiredService<PeliculasPage>();
+            MainPage = new NavigationPage(peliculasPage);
+        }
+    }
+}

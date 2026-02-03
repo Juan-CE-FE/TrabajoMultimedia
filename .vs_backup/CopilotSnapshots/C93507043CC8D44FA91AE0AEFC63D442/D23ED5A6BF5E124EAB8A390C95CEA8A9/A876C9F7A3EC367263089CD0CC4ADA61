@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionPeliculas.Pages.MainMenuPage"
+             Title="Menu Principal"
+             Padding="20">
+
+    <VerticalStackLayout Spacing="16" VerticalOptions="CenterAndExpand">
+        <Label Text="Gestion Peliculas" FontSize="24" HorizontalOptions="Center" />
+
+        <Button Text="Listar todas las peliculas" Clicked="OnListarAllClicked" />
+        <Button Text="Crear pelicula" Clicked="OnCrearClicked" />
+        <Button Text="Operaciones por Id (Obtener/Actualizar/Eliminar)" Clicked="OnManageByIdClicked" />
+        <Button Text="Ir a pantalla principal (Listado)" Clicked="OnGoToPeliculasPageClicked" />
+    </VerticalStackLayout>
+
+</ContentPage>
