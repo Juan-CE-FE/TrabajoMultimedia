@@ -54,6 +54,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = GestionPeliculas.Pages.Lis
 build_metadata.AdditionalFiles.TargetPath = Pages\ListPeliculasPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\ListPeliculasPage.xaml
 
+[C:/Users/jcfernandez/Desktop/GestionPeliculas/GestionPeliculas/Pages/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GestionPeliculas.Pages.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\LoginPage.xaml
+
 [C:/Users/jcfernandez/Desktop/GestionPeliculas/GestionPeliculas/Pages/MainMenuPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GestionPeliculas.Pages.MainMenuPage.xaml

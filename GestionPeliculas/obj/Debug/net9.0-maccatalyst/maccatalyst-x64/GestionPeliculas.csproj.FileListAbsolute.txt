@@ -609,3 +609,4 @@ C:\Users\jcfernandez\Desktop\GestionPeliculas\GestionPeliculas\obj\Debug\net9.0-
 C:\Users\jcfernandez\Desktop\GestionPeliculas\GestionPeliculas\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\GestionPeliculas.pdb
 C:\Users\jcfernandez\Desktop\GestionPeliculas\GestionPeliculas\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\GestionPeliculas.genruntimeconfig.cache
 C:\Users\jcfernandez\Desktop\GestionPeliculas\GestionPeliculas\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\ref\GestionPeliculas.dll
+C:\Users\jcfernandez\Desktop\GestionPeliculas\GestionPeliculas\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\GestionPeliculas.sourcelink.json

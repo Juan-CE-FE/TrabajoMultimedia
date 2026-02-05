@@ -8,7 +8,12 @@
     <ScrollView>
         <VerticalStackLayout Spacing="12">
 
-            <Button Text="Listar peliculas" Clicked="OnListarClicked" />
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="Listar peliculas" Clicked="OnListarClicked" />
+                <Button Text="Crear" Clicked="OnShowCreate" />
+                <Button Text="Buscar/Id" Clicked="OnShowManageById" />
+                <Button Text="Login" Clicked="OnLogin" />
+            </HorizontalStackLayout>
 
             <StackLayout x:Name="ResultsListContainer">
                 <CollectionView x:Name="ResultsList"
@@ -24,6 +29,9 @@
                                         <Label Text="{Binding Director}" FontSize="12" TextColor="Gray"/>
                                         <Label Text="{Binding Genero}" FontSize="12"/>
                                         <Label Text="{Binding AnhoLanzamiento}" FontSize="12"/>
+                                    </VerticalStackLayout>
+                                    <VerticalStackLayout HorizontalOptions="EndAndExpand">
+                                        <Button Text="Descargar poster" Clicked="OnDescargarPosterClicked" CommandParameter="{Binding Id}"/>
                                     </VerticalStackLayout>
                                 </HorizontalStackLayout>
                             </Frame>
@@ -42,12 +50,15 @@
                         <Entry x:Name="Crear_Genero" Placeholder="Genero"/>
                         <Entry x:Name="Crear_Anho" Placeholder="Anho" Keyboard="Numeric"/>
                         <Entry x:Name="Crear_RutaImagen" Placeholder="RutaImagen (URL o recurso)"/>
-                        <Button Text="Crear" Clicked="OnCrearClicked"/>
+                        <HorizontalStackLayout>
+                            <Button Text="Crear" Clicked="OnCrearClicked"/>
+                            <Button Text="Subir poster" Clicked="OnSubirPosterClicked" />
+                        </HorizontalStackLayout>
                     </VerticalStackLayout>
                 </Frame>
             </StackLayout>
 
-            <!-- Obtener por Id -->
+            <!-- Obtener por Id / Buscar -->
             <StackLayout x:Name="ManageByIdSection" IsVisible="False">
                 <Frame Padding="10" CornerRadius="8" BorderColor="#ccc">
                     <VerticalStackLayout>
@@ -58,6 +69,14 @@
                             <Button Text="Eliminar" Clicked="OnEliminarClicked" BackgroundColor="#E57373" />
                         </HorizontalStackLayout>
 
+                        <Label Text="O buscar por genero / ano / director" FontSize="12" TextColor="Gray"/>
+                        <HorizontalStackLayout Spacing="8">
+                            <Entry x:Name="Buscar_Genero" Placeholder="Genero" />
+                            <Entry x:Name="Buscar_Anho" Placeholder="Anho" WidthRequest="100" Keyboard="Numeric" />
+                            <Entry x:Name="Buscar_Director" Placeholder="Director" />
+                            <Button Text="Buscar" Clicked="OnBuscarClicked" />
+                        </HorizontalStackLayout>
+
                         <Label Text="(Si obtiene la entidad, puedes editar y pulsar Actualizar)" FontSize="12" TextColor="Gray"/>
 
                         <Entry x:Name="Editar_Titulo" Placeholder="Titulo"/>
@@ -65,7 +84,11 @@
                         <Entry x:Name="Editar_Genero" Placeholder="Genero"/>
                         <Entry x:Name="Editar_Anho" Placeholder="Anho" Keyboard="Numeric"/>
                         <Entry x:Name="Editar_RutaImagen" Placeholder="RutaImagen"/>
-                        <Button Text="Actualizar" Clicked="OnActualizarClicked"/>
+                        <HorizontalStackLayout>
+                            <Button Text="Actualizar" Clicked="OnActualizarClicked"/>
+                            <Button Text="Export JSON" Clicked="OnExportJsonClicked" />
+                            <Button Text="Export CSV" Clicked="OnExportCsvClicked" />
+                        </HorizontalStackLayout>
                     </VerticalStackLayout>
                 </Frame>
             </StackLayout>

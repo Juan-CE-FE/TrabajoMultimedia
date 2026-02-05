@@ -26,7 +26,7 @@ public partial class UpdatePeliculaPage : ContentPage
             var p = await _service.GetPeliculaAsync(id);
             if (p is null)
             {
-                await DisplayAlert("No encontrado", "No existe la película", "OK");
+                await DisplayAlert("No encontrado", "No existe la pelicula", "OK");
                 return;
             }
 
@@ -35,6 +35,7 @@ public partial class UpdatePeliculaPage : ContentPage
             GeneroEntry.Text = p.Genero;
             AnhoEntry.Text = p.AnhoLanzamiento.ToString();
             RutaImagenEntry.Text = p.RutaImagen;
+            SinopsisEditor.Text = p.Sinopsis;
         }
         catch (Exception ex)
         {
@@ -59,7 +60,8 @@ public partial class UpdatePeliculaPage : ContentPage
             Director = DirectorEntry.Text ?? string.Empty,
             Genero = GeneroEntry.Text ?? string.Empty,
             AnhoLanzamiento = anho,
-            RutaImagen = RutaImagenEntry.Text
+            RutaImagen = RutaImagenEntry.Text,
+            Sinopsis = SinopsisEditor.Text
         };
 
         try
@@ -67,6 +69,29 @@ public partial class UpdatePeliculaPage : ContentPage
             var ok = await _service.ActualizarPeliculaAsync(id, p);
             await DisplayAlert("Actualizar", ok ? "Actualizada" : "Fallo al actualizar", "OK");
             if (ok) await Navigation.PopAsync();
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", ex.Message, "OK");
+        }
+    }
+
+    private async void OnSubirPosterClicked(object sender, EventArgs e)
+    {
+        if (!int.TryParse(IdEntry.Text, out var id))
+        {
+            var idString = await DisplayPromptAsync("Subir poster", "Id de la pelicula:", initialValue: "");
+            if (string.IsNullOrWhiteSpace(idString) || !int.TryParse(idString, out id)) return;
+        }
+
+        try
+        {
+            var result = await MediaPicker.Default.PickPhotoAsync(new MediaPickerOptions { Title = "Seleccione imagen" });
+            if (result == null) return;
+
+            using var stream = await result.OpenReadAsync();
+            var ok = await _service.UploadPosterAsync(id, stream, result.FileName);
+            await DisplayAlert("Subir poster", ok ? "Subida correcta" : "Fallo al subir", "OK");
         }
         catch (Exception ex)
         {

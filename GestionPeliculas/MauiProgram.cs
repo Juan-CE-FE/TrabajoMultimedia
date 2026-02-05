@@ -28,7 +28,7 @@ namespace GestionPeliculas
                 client.BaseAddress = new Uri("https://localhost:7013/");
 #endif
 
-                // CONFIGURACIÓN DE AUTENTICACIÓN BÁSICA
+                // CONFIGURACIÓN DE AUTENTICACIÓN BÁSICA por defecto
                 var credentials = "juan:123";
                 var byteArray = System.Text.Encoding.UTF8.GetBytes(credentials);
                 var base64Credentials = Convert.ToBase64String(byteArray);
@@ -62,6 +62,8 @@ namespace GestionPeliculas
             builder.Services.AddTransient<GetByIdPage>();
             builder.Services.AddTransient<UpdatePeliculaPage>();
             builder.Services.AddTransient<DeletePeliculaPage>();
+            builder.Services.AddTransient<OpcionesPage>();
+            builder.Services.AddTransient<LoginPage>();
 
 #if DEBUG
             builder.Logging.AddDebug();

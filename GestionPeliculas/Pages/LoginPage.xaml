@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionPeliculas.Pages.LoginPage"
+             Title="Login"
+             Padding="10">
+
+    <VerticalStackLayout Spacing="12" VerticalOptions="Center" HorizontalOptions="Center">
+        <Label Text="Autenticacion basica" FontAttributes="Bold"/>
+        <Entry x:Name="UsernameEntry" Placeholder="Usuario"/>
+        <Entry x:Name="PasswordEntry" Placeholder="Contrasena" IsPassword="True"/>
+        <Button Text="Entrar" Clicked="OnLoginClicked"/>
+    </VerticalStackLayout>
+
+</ContentPage>

@@ -14,8 +14,12 @@
         <Entry x:Name="GeneroEntry" Placeholder="Genero" />
         <Entry x:Name="AnhoEntry" Placeholder="Anho" Keyboard="Numeric" />
         <Entry x:Name="RutaImagenEntry" Placeholder="Ruta imagen (URL)" />
+        <Editor x:Name="SinopsisEditor" Placeholder="Sinopsis" AutoSize="TextChanges" HeightRequest="100" />
 
-        <Button Text="Actualizar" Clicked="OnActualizarClicked" />
+        <HorizontalStackLayout>
+            <Button Text="Actualizar" Clicked="OnActualizarClicked" />
+            <Button Text="Subir poster" Clicked="OnSubirPosterClicked" />
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 
 </ContentPage>
