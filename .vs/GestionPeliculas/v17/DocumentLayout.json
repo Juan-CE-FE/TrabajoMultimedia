@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\mainmenupage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\mainmenupage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -97,10 +105,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\deletepeliculapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\deletepeliculapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -110,7 +114,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -130,19 +134,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ListPeliculasPage.xaml",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
-              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
-              "RelativeToolTip": "GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAOAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\LoginPage.xaml",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\LoginPage.xaml",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\LoginPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-29T19:38:58.947Z"
+              "WhenOpened": "2026-02-09T14:24:41.331Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "OpcionesPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\OpcionesPage.xaml.cs",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\OpcionesPage.xaml.cs",
@@ -154,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "CreatePeliculaPage.xaml",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\CreatePeliculaPage.xaml",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\CreatePeliculaPage.xaml",
@@ -166,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "OpcionesPage.xaml",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\OpcionesPage.xaml",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\OpcionesPage.xaml",
@@ -178,20 +183,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainMenuPage.xaml",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\MainMenuPage.xaml",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\MainMenuPage.xaml",
               "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\MainMenuPage.xaml",
               "RelativeToolTip": "GestionPeliculas\\Pages\\MainMenuPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-01-29T19:26:09.849Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "LoginPage.xaml",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\LoginPage.xaml",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\LoginPage.xaml",
@@ -199,11 +204,12 @@
               "RelativeToolTip": "GestionPeliculas\\Pages\\LoginPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-05T14:21:27.232Z"
+              "WhenOpened": "2026-02-05T14:21:27.232Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 1,
               "Title": "LoginPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\LoginPage.xaml.cs",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\LoginPage.xaml.cs",
@@ -211,11 +217,24 @@
               "RelativeToolTip": "GestionPeliculas\\Pages\\LoginPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T14:21:33.234Z"
+              "WhenOpened": "2026-02-05T14:21:33.234Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 5,
+              "Title": "ListPeliculasPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-29T19:38:58.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "ListPeliculasPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\ListPeliculasPage.xaml.cs",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\ListPeliculasPage.xaml.cs",
@@ -227,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "CreatePeliculaPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\CreatePeliculaPage.xaml.cs",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\CreatePeliculaPage.xaml.cs",
@@ -239,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "DeletePeliculaPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\DeletePeliculaPage.xaml.cs",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\DeletePeliculaPage.xaml.cs",
@@ -251,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "DeletePeliculaPage.xaml",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\DeletePeliculaPage.xaml",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\DeletePeliculaPage.xaml",
@@ -263,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "UpdatePeliculaPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml.cs",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml.cs",
@@ -275,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "UpdatePeliculaPage.xaml",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml",
@@ -287,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "GetByIdPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\GetByIdPage.xaml.cs",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\GetByIdPage.xaml.cs",
@@ -299,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "GetByIdPage.xaml",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\GetByIdPage.xaml",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\GetByIdPage.xaml",
@@ -311,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "MainMenuPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\MainMenuPage.xaml.cs",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\MainMenuPage.xaml.cs",
@@ -323,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "OpcionesPage.xaml",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\OpcionesPage.xaml",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\OpcionesPage.xaml",
@@ -334,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "PeliculasPage.xaml",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\PeliculasPage.xaml",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\PeliculasPage.xaml",
@@ -346,7 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "PeliculasPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\PeliculasPage.xaml.cs",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\PeliculasPage.xaml.cs",
@@ -358,7 +377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "PeliculasService.cs",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Service\\PeliculasService.cs",
               "RelativeDocumentMoniker": "GestionPeliculas\\Service\\PeliculasService.cs",
@@ -370,7 +389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\MauiProgram.cs",
               "RelativeDocumentMoniker": "GestionPeliculas\\MauiProgram.cs",
@@ -382,7 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\App.xaml.cs",
               "RelativeDocumentMoniker": "GestionPeliculas\\App.xaml.cs",
@@ -394,7 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\AppShell.xaml",
               "RelativeDocumentMoniker": "GestionPeliculas\\AppShell.xaml",
@@ -406,7 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\App.xaml",
               "RelativeDocumentMoniker": "GestionPeliculas\\App.xaml",
@@ -418,7 +437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "GestionPeliculas.csproj",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\GestionPeliculas.csproj",
               "RelativeDocumentMoniker": "GestionPeliculas\\GestionPeliculas.csproj",
