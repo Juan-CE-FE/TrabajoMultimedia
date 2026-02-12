@@ -2,151 +2,281 @@
 using System.Net.Http;
 using System.Net.Http.Json;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace GestionPeliculas.Service
 {
     public class PeliculasService
     {
-        private readonly HttpClient client;
+        private readonly HttpClient _client;
 
         public PeliculasService(HttpClient client)
         {
-            this.client = client ?? new HttpClient();
+            _client = client;
         }
 
-        // GET: api/peliculas
+        // ==================== CRUD ====================
+
         public async Task<List<Pelicula>> GetPeliculasAsync()
         {
             try
             {
-                // Instrumented HTTP call for debugging
-                var requestUri = "api/peliculas";
-                System.Diagnostics.Debug.WriteLine($"Llamando a: {client.BaseAddress}{requestUri}");
-
-                var response = await client.GetAsync(requestUri);
-                var body = await response.Content.ReadAsStringAsync();
-
-                System.Diagnostics.Debug.WriteLine($"HTTP {(int)response.StatusCode} - {response.StatusCode}");
-                System.Diagnostics.Debug.WriteLine($"Respuesta cuerpo: {body}");
-
+                var response = await _client.GetAsync("api/peliculas");
                 if (!response.IsSuccessStatusCode)
-                {
-                    throw new HttpRequestException($"Error {(int)response.StatusCode}: {response.ReasonPhrase}. Body: {body}");
-                }
+                    return new List<Pelicula>();
 
-                // Intentar deserializar el JSON recibido
-                try
-                {
-                    var peliculas = JsonConvert.DeserializeObject<List<Pelicula>>(body);
-                    return peliculas ?? new List<Pelicula>();
-                }
-                catch (Exception jsonEx)
-                {
-                    System.Diagnostics.Debug.WriteLine($"Error deserializando JSON: {jsonEx}");
-                    throw new Exception("Respuesta de la API no contiene JSON válido de películas.", jsonEx);
-                }
-            }
-            catch (TaskCanceledException tex)
-            {
-                System.Diagnostics.Debug.WriteLine($"Timeout o cancelado: {tex}");
-                throw;
-            }
-            catch (HttpRequestException hex)
-            {
-                System.Diagnostics.Debug.WriteLine($"HTTP EXCEPTION: {hex}");
-                throw;
+                var json = await response.Content.ReadAsStringAsync();
+                var peliculas = JsonConvert.DeserializeObject<List<Pelicula>>(json) ?? new List<Pelicula>();
+
+                await AsegurarUrlsImagenes(peliculas);
+                return peliculas;
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"EXCEPCIÓN: {ex}");
-                throw;
+                System.Diagnostics.Debug.WriteLine($"Error GetPeliculasAsync: {ex}");
+                return new List<Pelicula>();
             }
         }
 
-        // GET: api/peliculas/{id}
         public async Task<Pelicula?> GetPeliculaAsync(int id)
         {
-            return await client.GetFromJsonAsync<Pelicula>($"api/peliculas/{id}");
+            try
+            {
+                var response = await _client.GetAsync($"api/peliculas/{id}");
+                if (!response.IsSuccessStatusCode)
+                    return null;
+
+                var json = await response.Content.ReadAsStringAsync();
+                var pelicula = JsonConvert.DeserializeObject<Pelicula>(json);
+
+                if (pelicula != null)
+                    await AsegurarUrlsImagenes(new List<Pelicula> { pelicula });
+
+                return pelicula;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
-        // POST: api/peliculas
         public async Task<bool> CrearPeliculaAsync(Pelicula pelicula)
         {
-            var response = await client.PostAsJsonAsync("api/peliculas", pelicula);
-            return response.IsSuccessStatusCode;
+            try
+            {
+                var response = await _client.PostAsJsonAsync("api/peliculas", pelicula);
+                return response.IsSuccessStatusCode;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        // PUT: api/peliculas/{id}
         public async Task<bool> ActualizarPeliculaAsync(int id, Pelicula pelicula)
         {
-            var response = await client.PutAsJsonAsync($"api/peliculas/{id}", pelicula);
-            return response.IsSuccessStatusCode;
+            try
+            {
+                var response = await _client.PutAsJsonAsync($"api/peliculas/{id}", pelicula);
+                return response.IsSuccessStatusCode;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        // DELETE: api/peliculas/{id}
         public async Task<bool> EliminarPeliculaAsync(int id)
         {
-            var response = await client.DeleteAsync($"api/peliculas/{id}");
-            return response.IsSuccessStatusCode;
+            try
+            {
+                var response = await _client.DeleteAsync($"api/peliculas/{id}");
+                return response.IsSuccessStatusCode;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        // SEARCH: api/peliculas/search?genero=&anho=&director=
-        public async Task<List<Pelicula>> SearchPeliculasAsync(string? genero = null, int? anho = null, string? director = null)
+        // ==================== BÚSQUEDAS ====================
+
+        public async Task<List<Pelicula>> SearchByGeneroAsync(string genero)
         {
-            var query = System.Web.HttpUtility.ParseQueryString(string.Empty);
-            if (!string.IsNullOrWhiteSpace(genero)) query["genero"] = genero;
-            if (anho.HasValue) query["anho"] = anho.Value.ToString();
-            if (!string.IsNullOrWhiteSpace(director)) query["director"] = director;
+            try
+            {
+                var response = await _client.GetAsync($"api/peliculas/genero/{Uri.EscapeDataString(genero)}");
+                if (!response.IsSuccessStatusCode) return new List<Pelicula>();
 
-            var requestUri = "api/peliculas/search" + (query.Count > 0 ? "?" + query.ToString() : string.Empty);
-            var response = await client.GetAsync(requestUri);
-            if (!response.IsSuccessStatusCode) return new List<Pelicula>();
-            var body = await response.Content.ReadAsStringAsync();
-            return JsonConvert.DeserializeObject<List<Pelicula>>(body) ?? new List<Pelicula>();
+                var json = await response.Content.ReadAsStringAsync();
+                var list = JsonConvert.DeserializeObject<List<Pelicula>>(json) ?? new List<Pelicula>();
+                await AsegurarUrlsImagenes(list);
+                return list;
+            }
+            catch
+            {
+                return new List<Pelicula>();
+            }
         }
 
-        // EXPORT: api/peliculas/export?format=json|csv
-        public async Task<byte[]?> ExportPeliculasAsync(string format = "json")
+        public async Task<List<Pelicula>> SearchByAnhoAsync(int anho)
         {
-            var requestUri = $"api/peliculas/export?format={format}";
-            var response = await client.GetAsync(requestUri);
-            if (!response.IsSuccessStatusCode) return null;
-            return await response.Content.ReadAsByteArrayAsync();
+            try
+            {
+                var response = await _client.GetAsync($"api/peliculas/anho/{anho}");
+                if (!response.IsSuccessStatusCode) return new List<Pelicula>();
+
+                var json = await response.Content.ReadAsStringAsync();
+                var list = JsonConvert.DeserializeObject<List<Pelicula>>(json) ?? new List<Pelicula>();
+                await AsegurarUrlsImagenes(list);
+                return list;
+            }
+            catch
+            {
+                return new List<Pelicula>();
+            }
         }
 
-        // Upload poster: POST api/peliculas/{id}/poster
+        public async Task<List<Pelicula>> SearchByDirectorAsync(string director)
+        {
+            try
+            {
+                var response = await _client.GetAsync($"api/peliculas/director/{Uri.EscapeDataString(director)}");
+                if (!response.IsSuccessStatusCode) return new List<Pelicula>();
+
+                var json = await response.Content.ReadAsStringAsync();
+                var list = JsonConvert.DeserializeObject<List<Pelicula>>(json) ?? new List<Pelicula>();
+                await AsegurarUrlsImagenes(list);
+                return list;
+            }
+            catch
+            {
+                return new List<Pelicula>();
+            }
+        }
+
+        // ==================== GESTIÓN DE PÓSTERS ====================
+
         public async Task<bool> UploadPosterAsync(int id, Stream imageStream, string fileName)
         {
-            using var content = new MultipartFormDataContent();
-            var streamContent = new StreamContent(imageStream);
-            streamContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/jpeg");
-            content.Add(streamContent, "poster", fileName);
+            try
+            {
+                using var content = new MultipartFormDataContent();
+                var streamContent = new StreamContent(imageStream);
+                streamContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/png");
+                content.Add(streamContent, "archivo", fileName);
 
-            var response = await client.PostAsync($"api/peliculas/{id}/poster", content);
-            return response.IsSuccessStatusCode;
+                var response = await _client.PostAsync($"api/peliculas/{id}/imagen", content);
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error UploadPosterAsync: {ex}");
+                return false;
+            }
         }
 
-        // Download poster: GET api/peliculas/{id}/poster
         public async Task<byte[]?> DownloadPosterAsync(int id)
         {
-            var response = await client.GetAsync($"api/peliculas/{id}/poster");
-            if (!response.IsSuccessStatusCode) return null;
-            return await response.Content.ReadAsByteArrayAsync();
+            try
+            {
+                var response = await _client.GetAsync($"api/peliculas/{id}/descargar-poster");
+                if (!response.IsSuccessStatusCode)
+                    return null;
+
+                return await response.Content.ReadAsByteArrayAsync();
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error DownloadPosterAsync: {ex}");
+                return null;
+            }
         }
 
-        // Allow setting basic auth at runtime from the app (login screen)
+        // ==================== EXPORTACIONES ====================
+
+        public async Task<byte[]?> ExportarJsonAsync()
+        {
+            try
+            {
+                var response = await _client.GetAsync("api/peliculas/exportar/json");
+                return response.IsSuccessStatusCode ? await response.Content.ReadAsByteArrayAsync() : null;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public async Task<byte[]?> ExportarCsvAsync()
+        {
+            try
+            {
+                var response = await _client.GetAsync("api/peliculas/exportar/csv");
+                return response.IsSuccessStatusCode ? await response.Content.ReadAsByteArrayAsync() : null;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        // ==================== AUTENTICACIÓN ====================
+
         public void SetBasicAuth(string username, string password)
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                client.DefaultRequestHeaders.Authorization = null;
+                _client.DefaultRequestHeaders.Authorization = null;
                 return;
             }
 
             var credentials = $"{username}:{password}";
-            var byteArray = System.Text.Encoding.UTF8.GetBytes(credentials);
-            var base64Credentials = Convert.ToBase64String(byteArray);
-            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", base64Credentials);
+            var base64 = Convert.ToBase64String(Encoding.UTF8.GetBytes(credentials));
+            _client.DefaultRequestHeaders.Authorization =
+                new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", base64);
+        }
+
+        public async Task<bool> AuthenticateAsync(string username, string password)
+        {
+            SetBasicAuth(username, password);
+            try
+            {
+                var response = await _client.GetAsync("api/peliculas");
+                if (response.IsSuccessStatusCode)
+                    return true;
+
+                _client.DefaultRequestHeaders.Authorization = null;
+                return false;
+            }
+            catch
+            {
+                _client.DefaultRequestHeaders.Authorization = null;
+                return false;
+            }
+        }
+
+        // ==================== UTILIDADES ====================
+
+        private async Task AsegurarUrlsImagenes(IEnumerable<Pelicula> peliculas)
+        {
+            if (peliculas == null) return;
+
+            foreach (var p in peliculas)
+            {
+                if (string.IsNullOrEmpty(p.RutaImagen))
+                {
+                    var poster = await DownloadPosterAsync(p.Id);
+                    if (poster != null)
+                    {
+                        p.RutaImagen = $"{_client.BaseAddress}api/peliculas/{p.Id}/poster";
+                    }
+                }
+                else if (!Uri.IsWellFormedUriString(p.RutaImagen, UriKind.Absolute))
+                {
+                    p.RutaImagen = $"{_client.BaseAddress}api/peliculas/{p.Id}/poster";
+                }
+            }
         }
     }
 }

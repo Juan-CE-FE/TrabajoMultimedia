@@ -12,10 +12,7 @@
         <Entry x:Name="AnhoEntry" Placeholder="Anho" Keyboard="Numeric" />
         <Entry x:Name="RutaImagenEntry" Placeholder="Ruta imagen (URL)" />
         <Editor x:Name="SinopsisEditor" Placeholder="Sinopsis" AutoSize="TextChanges" HeightRequest="100" />
-        <HorizontalStackLayout>
-            <Button Text="Crear" Clicked="OnCrearClicked" />
-            <Button Text="Subir poster" Clicked="OnSubirPosterClicked" />
-        </HorizontalStackLayout>
+        <Button Text="Crear" Clicked="OnCrearClicked" />
     </VerticalStackLayout>
 
 </ContentPage>

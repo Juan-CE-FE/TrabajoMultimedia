@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using GestionPeliculas.Pages;
 using GestionPeliculas.Service;
+using System.Net.Http.Headers;
 
 namespace GestionPeliculas
 {
@@ -18,44 +19,43 @@ namespace GestionPeliculas
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            // Configurar HttpClient CON AUTENTICACIÓN
+            // Configurar HttpClient
             builder.Services.AddHttpClient<PeliculasService>((serviceProvider, client) =>
             {
-                // Usar HTTPS para el emulador Android cuando la API está configurada con certificado de desarrollo
 #if ANDROID
                 client.BaseAddress = new Uri("https://10.0.2.2:7013/");
 #else
                 client.BaseAddress = new Uri("https://localhost:7013/");
 #endif
 
-                // CONFIGURACIÓN DE AUTENTICACIÓN BÁSICA por defecto
+                // Autenticación básica por defecto
                 var credentials = "juan:123";
                 var byteArray = System.Text.Encoding.UTF8.GetBytes(credentials);
                 var base64Credentials = Convert.ToBase64String(byteArray);
-
                 client.DefaultRequestHeaders.Authorization =
-                    new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", base64Credentials);
+                    new AuthenticationHeaderValue("Basic", base64Credentials);
 
-                // Headers adicionales
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.Timeout = TimeSpan.FromSeconds(30);
             })
-            // En desarrollo sobre Android aceptar certificado de desarrollo (solo DEBUG)
             .ConfigurePrimaryHttpMessageHandler(() =>
             {
 #if DEBUG && ANDROID
                 return new HttpClientHandler
                 {
-                    // Aceptar cualquier certificado en desarrollo (no usar en producción)
-                    ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+                    ServerCertificateCustomValidationCallback =
+                        HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
                 };
 #else
                 return new HttpClientHandler();
 #endif
-            });
+            })
+            .AddHttpMessageHandler<LoggingHttpHandler>(); // ✅ AÑADIDO
 
-            // Registrar páginas (el servicio PeliculasService ya está registrado por AddHttpClient)
-            // Use transient so each navigation creates a fresh page instance and avoids UI references held by singleton
+            // Registrar servicios
+            builder.Services.AddSingleton<LoggingHttpHandler>();
+
+            // Registrar páginas
             builder.Services.AddTransient<MainMenuPage>();
             builder.Services.AddTransient<ListPeliculasPage>();
             builder.Services.AddTransient<CreatePeliculaPage>();
@@ -64,12 +64,35 @@ namespace GestionPeliculas
             builder.Services.AddTransient<DeletePeliculaPage>();
             builder.Services.AddTransient<OpcionesPage>();
             builder.Services.AddTransient<LoginPage>();
+            builder.Services.AddTransient<PeliculasPage>();
 
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
+        }
+    }
+
+    // ✅ NUEVO: Handler para logging HTTP
+    public class LoggingHttpHandler : DelegatingHandler
+    {
+        protected override async Task<HttpResponseMessage> SendAsync(
+            HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            System.Diagnostics.Debug.WriteLine($"➡️ Request: {request.Method} {request.RequestUri}");
+
+            if (request.Content != null)
+            {
+                var content = await request.Content.ReadAsStringAsync(cancellationToken);
+                System.Diagnostics.Debug.WriteLine($"📦 Body: {content}");
+            }
+
+            var response = await base.SendAsync(request, cancellationToken);
+
+            System.Diagnostics.Debug.WriteLine($"⬅️ Response: {(int)response.StatusCode} {response.StatusCode}");
+
+            return response;
         }
     }
 }

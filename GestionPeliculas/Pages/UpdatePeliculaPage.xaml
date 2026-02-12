@@ -16,10 +16,7 @@
         <Entry x:Name="RutaImagenEntry" Placeholder="Ruta imagen (URL)" />
         <Editor x:Name="SinopsisEditor" Placeholder="Sinopsis" AutoSize="TextChanges" HeightRequest="100" />
 
-        <HorizontalStackLayout>
-            <Button Text="Actualizar" Clicked="OnActualizarClicked" />
-            <Button Text="Subir poster" Clicked="OnSubirPosterClicked" />
-        </HorizontalStackLayout>
+        <Button Text="Actualizar" Clicked="OnActualizarClicked" />
     </VerticalStackLayout>
 
 </ContentPage>

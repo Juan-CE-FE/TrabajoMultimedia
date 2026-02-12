@@ -1,5 +1,7 @@
 using GestionPeliculas.Service;
 using GestionPeliculas.Model;
+using Microsoft.Maui.ApplicationModel.DataTransfer;
+using System.IO;
 
 namespace GestionPeliculas.Pages
 {
@@ -15,33 +17,106 @@ namespace GestionPeliculas.Pages
             _services = services;
         }
 
-
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
-            _ = LoadPeliculasAsync();
+            await CargarPeliculasAsync();
+            await ExportarAutomaticoAsync(); // Exportación automática
         }
 
-        private async Task LoadPeliculasAsync()
+        private async Task CargarPeliculasAsync()
         {
             try
             {
                 var peliculas = await _service.GetPeliculasAsync();
 
-                if (ListaPeliculas != null)
+                var items = new List<PeliculaItem>();
+                foreach (var p in peliculas)
                 {
-                    ListaPeliculas.ItemsSource = peliculas;
+                    var item = PeliculaItem.FromPelicula(p);
+
+                    // Cargar imagen automáticamente
+                    try
+                    {
+                        var bytes = await _service.DownloadPosterAsync(p.Id);
+                        if (bytes != null && bytes.Length > 0)
+                        {
+                            var stream = new MemoryStream(bytes);
+                            item.PosterImage = ImageSource.FromStream(() => new MemoryStream(bytes));
+
+                            // AUTO GUARDAR EN GALERÍA (requisito)
+                            await GuardarEnGaleriaAsync(bytes, $"poster_{p.Id}.png");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"Error cargando póster {p.Id}: {ex}");
+                    }
+
+                    items.Add(item);
                 }
-                else
+
+                ListaPeliculas.ItemsSource = items;
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"No se pudieron cargar las películas: {ex.Message}", "OK");
+            }
+        }
+
+        // AUTO GUARDADO EN GALERÍA (SIN CLICK)
+        private async Task GuardarEnGaleriaAsync(byte[] imageBytes, string filename)
+        {
+            try
+            {
+#if ANDROID
+                var context = Android.App.Application.Context;
+                var resolver = context.ContentResolver;
+
+                var values = new Android.Content.ContentValues();
+                values.Put(Android.Provider.MediaStore.IMediaColumns.DisplayName, filename);
+                values.Put(Android.Provider.MediaStore.IMediaColumns.MimeType, "image/png");
+                values.Put(Android.Provider.MediaStore.IMediaColumns.RelativePath, Android.OS.Environment.DirectoryPictures);
+
+                var uri = resolver.Insert(Android.Provider.MediaStore.Images.Media.ExternalContentUri, values);
+                using var stream = resolver.OpenOutputStream(uri);
+                await stream.WriteAsync(imageBytes, 0, imageBytes.Length);
+
+                System.Diagnostics.Debug.WriteLine($"Póster guardado automáticamente en galería: {filename}");
+#endif
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error guardando en galería: {ex}");
+            }
+        }
+
+        // EXPORTACIÓN AUTOMÁTICA (SIN CLICK)
+        private async Task ExportarAutomaticoAsync()
+        {
+            try
+            {
+                // Exportar JSON automáticamente
+                var jsonBytes = await _service.ExportarJsonAsync();
+                if (jsonBytes != null)
                 {
-                    System.Diagnostics.Debug.WriteLine("ListaPeliculas es null: revisar XAML x:Name");
+                    var jsonPath = Path.Combine(FileSystem.AppDataDirectory, "peliculas_automaticas.json");
+                    await File.WriteAllBytesAsync(jsonPath, jsonBytes);
+                    System.Diagnostics.Debug.WriteLine($"JSON exportado automáticamente: {jsonPath}");
+                }
+
+                // Exportar CSV automáticamente
+                var csvBytes = await _service.ExportarCsvAsync();
+                if (csvBytes != null)
+                {
+                    var csvPath = Path.Combine(FileSystem.AppDataDirectory, "peliculas_automaticas.csv");
+                    await File.WriteAllBytesAsync(csvPath, csvBytes);
+                    System.Diagnostics.Debug.WriteLine($"CSV exportado automáticamente: {csvPath}");
                 }
             }
             catch (Exception ex)
             {
-                // Mostrar error simple y escribir en debug
-                System.Diagnostics.Debug.WriteLine($"Error cargando películas: {ex.Message}");
-                await DisplayAlert("Error", "No se pudieron cargar las películas. Revisa la conexión o la API.", "OK");
+                System.Diagnostics.Debug.WriteLine($"Error exportación automática: {ex}");
             }
         }
 
@@ -49,14 +124,7 @@ namespace GestionPeliculas.Pages
         {
             var opcionesPage = _services.GetService(typeof(OpcionesPage)) as Page;
             if (opcionesPage != null)
-            {
                 await Navigation.PushAsync(opcionesPage);
-            }
-            else
-            {
-                await DisplayAlert("Error", "No se pudo abrir la página de opciones.", "OK");
-            }
         }
-
     }
 }

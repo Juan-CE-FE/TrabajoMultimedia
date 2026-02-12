@@ -1,4 +1,4 @@
-using GestionPeliculas.Pages;
+﻿using GestionPeliculas.Pages;
 using GestionPeliculas.Service;
 
 namespace GestionPeliculas.Pages;
@@ -43,5 +43,18 @@ public partial class MainMenuPage : ContentPage
     {
         var page = _services.GetService(typeof(DeletePeliculaPage)) as Page;
         if (page != null) await Navigation.PushAsync(page);
+    }
+
+    private async void OnOpcionesClicked(object sender, EventArgs e)
+    {
+        var page = _services.GetService(typeof(OpcionesPage)) as Page;
+        if (page != null)
+        {
+            await Navigation.PushAsync(page);
+        }
+        else
+        {
+            await DisplayAlert("Error", "No se pudo abrir OpcionesPage", "OK");
+        }
     }
 }

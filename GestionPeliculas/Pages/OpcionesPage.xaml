@@ -3,96 +3,210 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GestionPeliculas.Pages.OpcionesPage"
              Title="Opciones API"
-             Padding="10">
+             BackgroundColor="#F5F5F5">
 
     <ScrollView>
-        <VerticalStackLayout Spacing="12">
+        <VerticalStackLayout Spacing="25" Padding="25">
 
-            <HorizontalStackLayout Spacing="8">
-                <Button Text="Listar peliculas" Clicked="OnListarClicked" />
-                <Button Text="Crear" Clicked="OnShowCreate" />
-                <Button Text="Buscar/Id" Clicked="OnShowManageById" />
-                <Button Text="Login" Clicked="OnLogin" />
-            </HorizontalStackLayout>
+            <!-- ========== ENCABEZADO ========== -->
+            <Frame BackgroundColor="#2196F3" 
+                   Padding="25"
+                   BorderColor="Transparent">
+                <VerticalStackLayout Spacing="8" HorizontalOptions="Center">
+                    <Label Text="🎬 OPCIONES API" 
+                           FontSize="24" 
+                           FontAttributes="Bold" 
+                           TextColor="White"
+                           HorizontalOptions="Center"/>
+                    <Label Text="Exportar datos y gestionar pósters" 
+                           FontSize="14" 
+                           TextColor="White" 
+                           Opacity="0.9"
+                           HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Frame>
 
-            <StackLayout x:Name="ResultsListContainer">
-                <CollectionView x:Name="ResultsList"
-                                ItemsLayout="VerticalList"
-                                HeightRequest="300">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Frame Padding="8" Margin="0,4" CornerRadius="8" BorderColor="#ddd">
-                                <HorizontalStackLayout Spacing="10">
-                                    <Image Source="{Binding RutaImagen}" WidthRequest="60" HeightRequest="90" Aspect="AspectFill"/>
-                                    <VerticalStackLayout>
-                                        <Label Text="{Binding Titulo}" FontAttributes="Bold"/>
-                                        <Label Text="{Binding Director}" FontSize="12" TextColor="Gray"/>
-                                        <Label Text="{Binding Genero}" FontSize="12"/>
-                                        <Label Text="{Binding AnhoLanzamiento}" FontSize="12"/>
-                                    </VerticalStackLayout>
-                                    <VerticalStackLayout HorizontalOptions="EndAndExpand">
-                                        <Button Text="Descargar poster" Clicked="OnDescargarPosterClicked" CommandParameter="{Binding Id}"/>
-                                    </VerticalStackLayout>
-                                </HorizontalStackLayout>
+            <!-- ========== SECCIÓN 1: EXPORTAR DATOS ========== -->
+            <Frame CornerRadius="20" 
+                   BackgroundColor="White" 
+                   Padding="20"
+                   BorderColor="#E0E0E0">
+                <VerticalStackLayout Spacing="20">
+
+                    <!-- Título -->
+                    <HorizontalStackLayout Spacing="12">
+                        <Label Text="📤" FontSize="28"/>
+                        <Label Text="EXPORTAR PELÍCULAS" 
+                               FontSize="20" 
+                               FontAttributes="Bold" 
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <!-- Descripción -->
+                    <Label Text="Descarga todas las películas en formato JSON o CSV" 
+                           FontSize="14" 
+                           TextColor="#666666"
+                           Margin="0,-5,0,0"/>
+
+                    <!-- Botones de exportación -->
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="15">
+
+                        <Button Grid.Column="0"
+                                Text="📄 JSON"
+                                Clicked="OnExportJsonClicked"
+                                BackgroundColor="#4CAF50"
+                                TextColor="White"
+                                CornerRadius="12"
+                                HeightRequest="55"
+                                FontSize="16"
+                                FontAttributes="Bold"/>
+
+                        <Button Grid.Column="1"
+                                Text="📊 CSV"
+                                Clicked="OnExportCsvClicked"
+                                BackgroundColor="#FF9800"
+                                TextColor="White"
+                                CornerRadius="12"
+                                HeightRequest="55"
+                                FontSize="16"
+                                FontAttributes="Bold"/>
+                    </Grid>
+
+                    <!-- Nota de descarga automática -->
+                    <Label Text="⬇️ El archivo se descargará automáticamente"
+                           FontSize="12"
+                           TextColor="#4CAF50"
+                           HorizontalOptions="Center"
+                           Margin="0,5"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- ========== SECCIÓN 2: GESTIÓN DE PÓSTERS ========== -->
+            <Frame CornerRadius="20" 
+                   BackgroundColor="White" 
+                   Padding="20"
+                   BorderColor="#E0E0E0">
+                <VerticalStackLayout Spacing="20">
+
+                    <!-- Título -->
+                    <HorizontalStackLayout Spacing="12">
+                        <Label Text="🖼️" FontSize="28"/>
+                        <Label Text="GESTIÓN DE PÓSTERS" 
+                               FontSize="20" 
+                               FontAttributes="Bold" 
+                               VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <!-- Descripción -->
+                    <Label Text="Sube o descarga pósters de películas por ID" 
+                           FontSize="14" 
+                           TextColor="#666666"
+                           Margin="0,-5,0,0"/>
+
+                    <!-- ===== SUBIR PÓSTER ===== -->
+                    <Frame BackgroundColor="#E8F5E9" 
+                           CornerRadius="15" 
+                           Padding="20"
+                           BorderColor="Transparent"
+                           Margin="0,5">
+                        <VerticalStackLayout Spacing="15">
+
+                            <HorizontalStackLayout Spacing="10">
+                                <Label Text="⬆️" FontSize="22"/>
+                                <Label Text="SUBIR PÓSTER" 
+                                       FontSize="16" 
+                                       FontAttributes="Bold" 
+                                       TextColor="#2E7D32"
+                                       VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+
+                            <!-- Campo ID -->
+                            <Frame BackgroundColor="White" 
+                                   CornerRadius="10" 
+                                   Padding="0"
+                                   BorderColor="#C8E6C9"
+                                   HeightRequest="50">
+                                <Entry x:Name="SubirIdEntry" 
+                                       Placeholder="ID de la película"
+                                       Keyboard="Numeric"
+                                       BackgroundColor="Transparent"
+                                       Margin="15,0"
+                                       FontSize="15"/>
                             </Frame>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-            </StackLayout>
 
-            <!-- Crear -->
-            <StackLayout x:Name="CreateSection" IsVisible="False">
-                <Frame Padding="10" CornerRadius="8" BorderColor="#ccc">
-                    <VerticalStackLayout>
-                        <Label Text="Crear pelicula" FontAttributes="Bold"/>
-                        <Entry x:Name="Crear_Titulo" Placeholder="Titulo"/>
-                        <Entry x:Name="Crear_Director" Placeholder="Director"/>
-                        <Entry x:Name="Crear_Genero" Placeholder="Genero"/>
-                        <Entry x:Name="Crear_Anho" Placeholder="Anho" Keyboard="Numeric"/>
-                        <Entry x:Name="Crear_RutaImagen" Placeholder="RutaImagen (URL o recurso)"/>
-                        <HorizontalStackLayout>
-                            <Button Text="Crear" Clicked="OnCrearClicked"/>
-                            <Button Text="Subir poster" Clicked="OnSubirPosterClicked" />
-                        </HorizontalStackLayout>
-                    </VerticalStackLayout>
-                </Frame>
-            </StackLayout>
+                            <!-- Botón subir -->
+                            <Button Text="📁 SELECCIONAR IMAGEN Y SUBIR" 
+                                    Clicked="OnSubirPosterClicked"
+                                    BackgroundColor="#2E7D32"
+                                    TextColor="White"
+                                    CornerRadius="10"
+                                    HeightRequest="50"
+                                    FontSize="14"
+                                    FontAttributes="Bold"/>
+                        </VerticalStackLayout>
+                    </Frame>
 
-            <!-- Obtener por Id / Buscar -->
-            <StackLayout x:Name="ManageByIdSection" IsVisible="False">
-                <Frame Padding="10" CornerRadius="8" BorderColor="#ccc">
-                    <VerticalStackLayout>
-                        <Label Text="Obtener / Actualizar / Eliminar por Id" FontAttributes="Bold"/>
-                        <HorizontalStackLayout Spacing="8">
-                            <Entry x:Name="IdEntry" Placeholder="Id" WidthRequest="120" Keyboard="Numeric"/>
-                            <Button Text="Obtener" Clicked="OnObtenerClicked"/>
-                            <Button Text="Eliminar" Clicked="OnEliminarClicked" BackgroundColor="#E57373" />
-                        </HorizontalStackLayout>
+                    <!-- ===== DESCARGAR PÓSTER ===== -->
+                    <Frame BackgroundColor="#FFF3E0" 
+                           CornerRadius="15" 
+                           Padding="20"
+                           BorderColor="Transparent"
+                           Margin="0,5">
+                        <VerticalStackLayout Spacing="15">
 
-                        <Label Text="O buscar por genero / ano / director" FontSize="12" TextColor="Gray"/>
-                        <HorizontalStackLayout Spacing="8">
-                            <Entry x:Name="Buscar_Genero" Placeholder="Genero" />
-                            <Entry x:Name="Buscar_Anho" Placeholder="Anho" WidthRequest="100" Keyboard="Numeric" />
-                            <Entry x:Name="Buscar_Director" Placeholder="Director" />
-                            <Button Text="Buscar" Clicked="OnBuscarClicked" />
-                        </HorizontalStackLayout>
+                            <HorizontalStackLayout Spacing="10">
+                                <Label Text="⬇️" FontSize="22"/>
+                                <Label Text="DESCARGAR PÓSTER" 
+                                       FontSize="16" 
+                                       FontAttributes="Bold" 
+                                       TextColor="#E65100"
+                                       VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
 
-                        <Label Text="(Si obtiene la entidad, puedes editar y pulsar Actualizar)" FontSize="12" TextColor="Gray"/>
+                            <!-- Campo ID -->
+                            <Frame BackgroundColor="White" 
+                                   CornerRadius="10" 
+                                   Padding="0"
+                                   BorderColor="#FFCC80"
+                                   HeightRequest="50">
+                                <Entry x:Name="DescargarIdEntry" 
+                                       Placeholder="ID de la película"
+                                       Keyboard="Numeric"
+                                       BackgroundColor="Transparent"
+                                       Margin="15,0"
+                                       FontSize="15"/>
+                            </Frame>
 
-                        <Entry x:Name="Editar_Titulo" Placeholder="Titulo"/>
-                        <Entry x:Name="Editar_Director" Placeholder="Director"/>
-                        <Entry x:Name="Editar_Genero" Placeholder="Genero"/>
-                        <Entry x:Name="Editar_Anho" Placeholder="Anho" Keyboard="Numeric"/>
-                        <Entry x:Name="Editar_RutaImagen" Placeholder="RutaImagen"/>
-                        <HorizontalStackLayout>
-                            <Button Text="Actualizar" Clicked="OnActualizarClicked"/>
-                            <Button Text="Export JSON" Clicked="OnExportJsonClicked" />
-                            <Button Text="Export CSV" Clicked="OnExportCsvClicked" />
-                        </HorizontalStackLayout>
-                    </VerticalStackLayout>
-                </Frame>
-            </StackLayout>
+                            <!-- Botón descargar -->
+                            <Button Text="⬇️ DESCARGAR Y GUARDAR EN GALERÍA" 
+                                    Clicked="OnDescargarPosterClicked"
+                                    BackgroundColor="#E65100"
+                                    TextColor="White"
+                                    CornerRadius="10"
+                                    HeightRequest="50"
+                                    FontSize="14"
+                                    FontAttributes="Bold"/>
 
+                            <Label Text="ℹ️ Se guardará automáticamente en la galería"
+                                   FontSize="11"
+                                   TextColor="#E65100"
+                                   HorizontalOptions="Center"
+                                   Opacity="0.8"/>
+                        </VerticalStackLayout>
+                    </Frame>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Botón volver -->
+            <Button Text="← VOLVER AL MENÚ PRINCIPAL" 
+                    Clicked="OnVolverClicked"
+                    BackgroundColor="#757575"
+                    TextColor="White"
+                    CornerRadius="12"
+                    HeightRequest="50"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    Margin="0,10"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

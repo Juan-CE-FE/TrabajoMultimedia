@@ -1,5 +1,4 @@
 ﻿using GestionPeliculas.Pages;
-using Microsoft.Maui.Controls;
 
 namespace GestionPeliculas
 {
@@ -9,8 +8,8 @@ namespace GestionPeliculas
         {
             InitializeComponent();
 
-            var mainMenu = serviceProvider.GetRequiredService<MainMenuPage>();
-            MainPage = new NavigationPage(mainMenu);
+            var login = serviceProvider.GetRequiredService<LoginPage>();
+            MainPage = new NavigationPage(login);
         }
     }
 }

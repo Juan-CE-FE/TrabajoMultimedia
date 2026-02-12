@@ -3,24 +3,120 @@
   "WorkspaceRootPath": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\opcionespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\opcionespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\createpeliculapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\createpeliculapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\createpeliculapage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\createpeliculapage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\opcionespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\opcionespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\mainmenupage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\mainmenupage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\mainmenupage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\mainmenupage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\listpeliculaspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\listpeliculaspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\service\\peliculaitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\service\\peliculaitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\listpeliculaspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\listpeliculaspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\peliculaspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\peliculaspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\service\\peliculasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\service\\peliculasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\getbyidpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\getbyidpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\getbyidpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\getbyidpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\updatepeliculapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\updatepeliculapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\updatepeliculapage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\updatepeliculapage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\updatepeliculapage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\updatepeliculapage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\peliculaspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\peliculaspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\getbyidpage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\getbyidpage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\deletepeliculapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\deletepeliculapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\deletepeliculapage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\deletepeliculapage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\Models\\Pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GestionPeliculasApi\\Models\\Pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\mainmenupage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\mainmenupage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\opcionespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\opcionespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\opcionespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\opcionespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\listpeliculaspage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -39,72 +135,28 @@
       "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\opcionespage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\peliculaspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\peliculaspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\service\\peliculasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\service\\peliculasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\peliculaspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\peliculaspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\gestionpeliculas.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\gestionpeliculas.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\mainmenupage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\mainmenupage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GestionPeliculasApi\\Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\listpeliculaspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\listpeliculaspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\Controllers\\PeliculasController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GestionPeliculasApi\\Controllers\\PeliculasController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\createpeliculapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\createpeliculapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GestionPeliculasApi\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\getbyidpage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\getbyidpage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GestionPeliculasApi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\getbyidpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\getbyidpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\updatepeliculapage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\updatepeliculapage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\updatepeliculapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\updatepeliculapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\deletepeliculapage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\deletepeliculapage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|c:\\users\\jcfernandez\\desktop\\gestionpeliculas\\gestionpeliculas\\pages\\deletepeliculapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32B75373-AAB7-4A4E-8D6E-3536D07B28D1}|GestionPeliculas\\GestionPeliculas.csproj|solutionrelative:gestionpeliculas\\pages\\deletepeliculapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\Migrations\\README.txt||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GestionPeliculasApi\\Migrations\\README.txt||{8B382828-6202-11D1-8870-0000F87579D2}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -114,15 +166,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
@@ -133,70 +181,308 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginPage.xaml",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\LoginPage.xaml",
-              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\LoginPage.xaml",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\LoginPage.xaml",
-              "RelativeToolTip": "GestionPeliculas\\Pages\\LoginPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-09T14:24:41.331Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "OpcionesPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\OpcionesPage.xaml.cs",
-              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\OpcionesPage.xaml.cs",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\OpcionesPage.xaml.cs",
-              "RelativeToolTip": "GestionPeliculas\\Pages\\OpcionesPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "GestionPeliculas\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\MauiProgram.cs",
+              "RelativeToolTip": "GestionPeliculas\\MauiProgram.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowEAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T19:09:21.269Z"
+              "WhenOpened": "2026-01-28T17:42:21.743Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CreatePeliculaPage.xaml",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\CreatePeliculaPage.xaml",
-              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\CreatePeliculaPage.xaml",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\CreatePeliculaPage.xaml",
-              "RelativeToolTip": "GestionPeliculas\\Pages\\CreatePeliculaPage.xaml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAQwBQAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-29T19:39:36.689Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "OpcionesPage.xaml",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\OpcionesPage.xaml",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\OpcionesPage.xaml",
               "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\OpcionesPage.xaml",
               "RelativeToolTip": "GestionPeliculas\\Pages\\OpcionesPage.xaml",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAM8AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-29T19:13:21.281Z"
+              "WhenOpened": "2026-01-29T19:13:21.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OpcionesPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\OpcionesPage.xaml.cs",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\OpcionesPage.xaml.cs",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\OpcionesPage.xaml.cs",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\OpcionesPage.xaml.cs",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAcwKQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T19:09:21.269Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "CreatePeliculaPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\CreatePeliculaPage.xaml",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\CreatePeliculaPage.xaml",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\CreatePeliculaPage.xaml",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\CreatePeliculaPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-12T16:03:22.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreatePeliculaPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\CreatePeliculaPage.xaml.cs",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\CreatePeliculaPage.xaml.cs",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\CreatePeliculaPage.xaml.cs",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\CreatePeliculaPage.xaml.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T19:39:45.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\LoginPage.xaml.cs",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\LoginPage.xaml.cs",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\LoginPage.xaml.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwDQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T14:21:33.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainMenuPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\MainMenuPage.xaml.cs",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\MainMenuPage.xaml.cs",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\MainMenuPage.xaml.cs",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\MainMenuPage.xaml.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAA2wC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T19:26:18.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "MainMenuPage.xaml",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\MainMenuPage.xaml",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\MainMenuPage.xaml",
               "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\MainMenuPage.xaml",
               "RelativeToolTip": "GestionPeliculas\\Pages\\MainMenuPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAcwDkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-29T19:26:09.849Z",
+              "WhenOpened": "2026-02-09T15:08:53.218Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\App.xaml.cs",
+              "RelativeDocumentMoniker": "GestionPeliculas\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\App.xaml.cs",
+              "RelativeToolTip": "GestionPeliculas\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:54:38.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\App.xaml",
+              "RelativeDocumentMoniker": "GestionPeliculas\\App.xaml",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\App.xaml",
+              "RelativeToolTip": "GestionPeliculas\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-29T14:23:02.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "GestionPeliculas\\AppShell.xaml.cs",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\AppShell.xaml.cs",
+              "RelativeToolTip": "GestionPeliculas\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T16:06:46.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ListPeliculasPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\ListPeliculasPage.xaml.cs",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\ListPeliculasPage.xaml.cs",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\ListPeliculasPage.xaml.cs",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\ListPeliculasPage.xaml.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAADwvzkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T19:39:06.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ListPeliculasPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAcwCMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-09T16:10:58.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PeliculaItem.cs",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Service\\PeliculaItem.cs",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Service\\PeliculaItem.cs",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Service\\PeliculaItem.cs",
+              "RelativeToolTip": "GestionPeliculas\\Service\\PeliculaItem.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA2wB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T15:13:13.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PeliculasPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\PeliculasPage.xaml.cs",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\PeliculasPage.xaml.cs",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\PeliculasPage.xaml.cs",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\PeliculasPage.xaml.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAcwIEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:53:53.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PeliculasService.cs",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Service\\PeliculasService.cs",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Service\\PeliculasService.cs",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Service\\PeliculasService.cs",
+              "RelativeToolTip": "GestionPeliculas\\Service\\PeliculasService.cs",
+              "ViewState": "AgIAAAYBAAAAAAAAAAAcwBkBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:36:01.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GetByIdPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\GetByIdPage.xaml",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\GetByIdPage.xaml",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\GetByIdPage.xaml",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\GetByIdPage.xaml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAwBEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-12T16:16:46.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GetByIdPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\GetByIdPage.xaml.cs",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\GetByIdPage.xaml.cs",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\GetByIdPage.xaml.cs",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\GetByIdPage.xaml.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAcwEYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T19:40:00.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UpdatePeliculaPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml.cs",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml.cs",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml.cs",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAcwGcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T19:40:21.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UpdatePeliculaPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwAkAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-12T16:05:46.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\AppShell.xaml",
+              "RelativeDocumentMoniker": "GestionPeliculas\\AppShell.xaml",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\AppShell.xaml",
+              "RelativeToolTip": "GestionPeliculas\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-28T18:05:53.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UpdatePeliculaPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-29T19:40:07.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "PeliculasPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\PeliculasPage.xaml",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\PeliculasPage.xaml",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\PeliculasPage.xaml",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\PeliculasPage.xaml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAcwCkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-28T17:53:38.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "LoginPage.xaml",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\LoginPage.xaml",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\LoginPage.xaml",
@@ -204,57 +490,19 @@
               "RelativeToolTip": "GestionPeliculas\\Pages\\LoginPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-05T14:21:27.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-09T14:24:41.331Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\LoginPage.xaml.cs",
-              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\LoginPage.xaml.cs",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\LoginPage.xaml.cs",
-              "RelativeToolTip": "GestionPeliculas\\Pages\\LoginPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T14:21:33.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ListPeliculasPage.xaml",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
-              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
-              "RelativeToolTip": "GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAOAAAAAAAAAA==",
+              "DocumentIndex": 24,
+              "Title": "GetByIdPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\GetByIdPage.xaml",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\GetByIdPage.xaml",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\GetByIdPage.xaml",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\GetByIdPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwCAAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-29T19:38:58.947Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ListPeliculasPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\ListPeliculasPage.xaml.cs",
-              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\ListPeliculasPage.xaml.cs",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\ListPeliculasPage.xaml.cs",
-              "RelativeToolTip": "GestionPeliculas\\Pages\\ListPeliculasPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T19:39:06.907Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CreatePeliculaPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\CreatePeliculaPage.xaml.cs",
-              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\CreatePeliculaPage.xaml.cs",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\CreatePeliculaPage.xaml.cs",
-              "RelativeToolTip": "GestionPeliculas\\Pages\\CreatePeliculaPage.xaml.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAABRwDwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T19:39:45.641Z"
+              "WhenOpened": "2026-01-29T19:39:53.146Z"
             },
             {
               "$type": "Document",
@@ -264,85 +512,143 @@
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\DeletePeliculaPage.xaml.cs",
               "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\DeletePeliculaPage.xaml.cs",
               "RelativeToolTip": "GestionPeliculas\\Pages\\DeletePeliculaPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAcwBkAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-29T19:40:33.74Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "DeletePeliculaPage.xaml",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\DeletePeliculaPage.xaml",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\DeletePeliculaPage.xaml",
               "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\DeletePeliculaPage.xaml",
               "RelativeToolTip": "GestionPeliculas\\Pages\\DeletePeliculaPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-29T19:40:26.552Z"
+              "WhenOpened": "2026-01-29T19:40:26.552Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "UpdatePeliculaPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml.cs",
-              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml.cs",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml.cs",
-              "RelativeToolTip": "GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAABRwGQAAAABAAAAAAAAAA==",
+              "DocumentIndex": 34,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "GestionPeliculasApi\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "GestionPeliculasApi\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T19:40:21.144Z"
+              "WhenOpened": "2026-02-09T16:13:38.539Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "UpdatePeliculaPage.xaml",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml",
-              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml",
-              "RelativeToolTip": "GestionPeliculas\\Pages\\UpdatePeliculaPage.xaml",
-              "ViewState": "AgIAABcAAAAAAAAAAABBwBgAAAAOAAAAAAAAAA==",
+              "DocumentIndex": 27,
+              "Title": "Pelicula.cs",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\Models\\Pelicula.cs",
+              "RelativeDocumentMoniker": "GestionPeliculasApi\\Models\\Pelicula.cs",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\Models\\Pelicula.cs",
+              "RelativeToolTip": "GestionPeliculasApi\\Models\\Pelicula.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T16:13:34.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "PeliculasController.cs",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\Controllers\\PeliculasController.cs",
+              "RelativeDocumentMoniker": "GestionPeliculasApi\\Controllers\\PeliculasController.cs",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\Controllers\\PeliculasController.cs",
+              "RelativeToolTip": "GestionPeliculasApi\\Controllers\\PeliculasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T16:14:06.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "README.txt",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\Migrations\\README.txt",
+              "RelativeDocumentMoniker": "GestionPeliculasApi\\Migrations\\README.txt",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\Migrations\\README.txt",
+              "RelativeToolTip": "GestionPeliculasApi\\Migrations\\README.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-02-09T16:14:21.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\appsettings.json",
+              "RelativeDocumentMoniker": "GestionPeliculasApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\appsettings.json",
+              "RelativeToolTip": "GestionPeliculasApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-09T16:14:16.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\Program.cs",
+              "RelativeDocumentMoniker": "GestionPeliculasApi\\Program.cs",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculasApi\\Program.cs",
+              "RelativeToolTip": "GestionPeliculasApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T16:14:12.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "MainMenuPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\MainMenuPage.xaml",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\MainMenuPage.xaml",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\MainMenuPage.xaml",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\MainMenuPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-29T19:40:07.924Z"
+              "WhenOpened": "2026-01-29T19:26:09.849Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "GetByIdPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\GetByIdPage.xaml.cs",
-              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\GetByIdPage.xaml.cs",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\GetByIdPage.xaml.cs",
-              "RelativeToolTip": "GestionPeliculas\\Pages\\GetByIdPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T19:40:00.906Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "GetByIdPage.xaml",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\GetByIdPage.xaml",
-              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\GetByIdPage.xaml",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\GetByIdPage.xaml",
-              "RelativeToolTip": "GestionPeliculas\\Pages\\GetByIdPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAOAAAAAAAAAA==",
+              "DocumentIndex": 31,
+              "Title": "CreatePeliculaPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\CreatePeliculaPage.xaml",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\CreatePeliculaPage.xaml",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\CreatePeliculaPage.xaml",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\CreatePeliculaPage.xaml",
+              "ViewState": "AgIAAA8AAAAAAAAAAIBJwBEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-29T19:39:53.146Z"
+              "WhenOpened": "2026-01-29T19:39:36.689Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "MainMenuPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\MainMenuPage.xaml.cs",
-              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\MainMenuPage.xaml.cs",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\MainMenuPage.xaml.cs",
-              "RelativeToolTip": "GestionPeliculas\\Pages\\MainMenuPage.xaml.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAEBVwC4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T19:26:18.531Z"
+              "DocumentIndex": 30,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\LoginPage.xaml",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\LoginPage.xaml",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\LoginPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-05T14:21:27.232Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 29,
+              "Title": "ListPeliculasPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
+              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
+              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
+              "RelativeToolTip": "GestionPeliculas\\Pages\\ListPeliculasPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-29T19:38:58.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
               "Title": "OpcionesPage.xaml",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\OpcionesPage.xaml",
               "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\OpcionesPage.xaml",
@@ -353,91 +659,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PeliculasPage.xaml",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\PeliculasPage.xaml",
-              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\PeliculasPage.xaml",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\PeliculasPage.xaml",
-              "RelativeToolTip": "GestionPeliculas\\Pages\\PeliculasPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-28T17:53:38.712Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "PeliculasPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\PeliculasPage.xaml.cs",
-              "RelativeDocumentMoniker": "GestionPeliculas\\Pages\\PeliculasPage.xaml.cs",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Pages\\PeliculasPage.xaml.cs",
-              "RelativeToolTip": "GestionPeliculas\\Pages\\PeliculasPage.xaml.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAowAUAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:53:53.462Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PeliculasService.cs",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Service\\PeliculasService.cs",
-              "RelativeDocumentMoniker": "GestionPeliculas\\Service\\PeliculasService.cs",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\Service\\PeliculasService.cs",
-              "RelativeToolTip": "GestionPeliculas\\Service\\PeliculasService.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAEBVwD8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:36:01.883Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "GestionPeliculas\\MauiProgram.cs",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\MauiProgram.cs",
-              "RelativeToolTip": "GestionPeliculas\\MauiProgram.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAEBVwDIAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:42:21.743Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\App.xaml.cs",
-              "RelativeDocumentMoniker": "GestionPeliculas\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\App.xaml.cs",
-              "RelativeToolTip": "GestionPeliculas\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:54:38.684Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\AppShell.xaml",
-              "RelativeDocumentMoniker": "GestionPeliculas\\AppShell.xaml",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\AppShell.xaml",
-              "RelativeToolTip": "GestionPeliculas\\AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-28T18:05:53.651Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\App.xaml",
-              "RelativeDocumentMoniker": "GestionPeliculas\\App.xaml",
-              "ToolTip": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\App.xaml",
-              "RelativeToolTip": "GestionPeliculas\\App.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-29T14:23:02.843Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 33,
               "Title": "GestionPeliculas.csproj",
               "DocumentMoniker": "C:\\Users\\jcfernandez\\Desktop\\GestionPeliculas\\GestionPeliculas\\GestionPeliculas.csproj",
               "RelativeDocumentMoniker": "GestionPeliculas\\GestionPeliculas.csproj",
@@ -445,8 +667,7 @@
               "RelativeToolTip": "GestionPeliculas\\GestionPeliculas.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-28T17:37:23.226Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T17:37:23.226Z"
             }
           ]
         }

@@ -5,18 +5,29 @@
              Title="Obtener por Id"
              Padding="10">
 
-    <VerticalStackLayout Spacing="12">
-        <Entry x:Name="IdEntry" Placeholder="Id" Keyboard="Numeric" />
-        <Button Text="Obtener" Clicked="OnObtenerClicked" />
+	<VerticalStackLayout Spacing="12">
+		<Entry x:Name="IdEntry" Placeholder="Id" Keyboard="Numeric" />
+		<Button Text="Obtener" Clicked="OnObtenerClicked" />
 
-        <Frame Padding="10" CornerRadius="8" BorderColor="#ccc">
-            <VerticalStackLayout>
-                <Label x:Name="TituloLabel" />
-                <Label x:Name="DirectorLabel" />
-                <Label x:Name="GeneroLabel" />
-                <Label x:Name="AnhoLabel" />
-            </VerticalStackLayout>
-        </Frame>
-    </VerticalStackLayout>
+		<Frame Padding="10" CornerRadius="8" BorderColor="#ccc">
+			<ScrollView HeightRequest="300">
+				<VerticalStackLayout Spacing="8">
+					<Label x:Name="TituloLabel" FontAttributes="Bold" FontSize="16" />
+					<Label x:Name="DirectorLabel" />
+					<Label x:Name="GeneroLabel" />
+					<Label x:Name="AnhoLabel" />
+					<Label x:Name="SinopsisLabel"
+                           Text="Sinopsis: "
+                           IsVisible="False"
+                           x:FieldModifier="public"/>
+
+					<Label x:Name="RutaImagenLabel"
+                           Text="Imagen: "
+                           IsVisible="False"
+                           x:FieldModifier="public"/>
+				</VerticalStackLayout>
+			</ScrollView>
+		</Frame>
+	</VerticalStackLayout>
 
 </ContentPage>
