@@ -3,13 +3,68 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GestionPeliculas.Pages.LoginPage"
              Title="Login"
-             Padding="10">
+             BackgroundColor="#2196F3">
 
-    <VerticalStackLayout Spacing="12" VerticalOptions="Center" HorizontalOptions="Center">
-        <Label Text="Autenticacion basica" FontAttributes="Bold"/>
-        <Entry x:Name="UsernameEntry" Placeholder="Usuario"/>
-        <Entry x:Name="PasswordEntry" Placeholder="Contrasena" IsPassword="True"/>
-        <Button Text="Entrar" Clicked="OnLoginClicked"/>
+    <VerticalStackLayout Spacing="15" 
+                         VerticalOptions="Center" 
+                         HorizontalOptions="Center"
+                         Padding="30"
+                         MaximumWidthRequest="400">
+
+        <!-- Logo -->
+        <Label Text="🎬" 
+               FontSize="70" 
+               TextColor="White" 
+               HorizontalOptions="Center"
+               Margin="0,0,0,10"/>
+
+        <Label Text="Gestión de Películas" 
+               FontSize="26" 
+               FontAttributes="Bold"
+               TextColor="White" 
+               HorizontalOptions="Center"
+               Margin="0,0,0,30"/>
+
+        <!-- Campo Usuario con estilo -->
+        <Frame CornerRadius="12" 
+               BackgroundColor="White" 
+               Padding="0"
+               HeightRequest="55"
+               Margin="0,5">
+            <Entry x:Name="UsernameEntry" 
+                   Placeholder="Usuario"
+                   PlaceholderColor="#999"
+                   BackgroundColor="Transparent"
+                   Margin="15,0"
+                   FontSize="16"
+                   TextColor="#333"/>
+        </Frame>
+
+        <!-- Campo Contraseña con estilo -->
+        <Frame CornerRadius="12" 
+               BackgroundColor="White" 
+               Padding="0"
+               HeightRequest="55"
+               Margin="0,5">
+            <Entry x:Name="PasswordEntry" 
+                   Placeholder="Contraseña"
+                   PlaceholderColor="#999"
+                   IsPassword="True"
+                   BackgroundColor="Transparent"
+                   Margin="15,0"
+                   FontSize="16"
+                   TextColor="#333"/>
+        </Frame>
+
+        <!-- Botón de login -->
+        <Button Text="INICIAR SESIÓN" 
+                Clicked="OnLoginClicked"
+                BackgroundColor="#1976D2"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="55"
+                FontSize="16"
+                FontAttributes="Bold"
+                Margin="0,20,0,0"/>
     </VerticalStackLayout>
-
 </ContentPage>

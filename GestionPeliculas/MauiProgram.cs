@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using GestionPeliculas.Pages;
 using GestionPeliculas.Service;
-using System.Net.Http.Headers;
+using Microsoft.Maui.Devices;
 
 namespace GestionPeliculas
 {
@@ -23,17 +23,20 @@ namespace GestionPeliculas
             builder.Services.AddHttpClient<PeliculasService>((serviceProvider, client) =>
             {
 #if ANDROID
-                client.BaseAddress = new Uri("https://10.0.2.2:7013/");
+                if (DeviceInfo.DeviceType == DeviceType.Virtual)
+                {
+                    // ✅ EMULADOR: HTTPS en puerto 7013
+                    client.BaseAddress = new Uri("https://10.0.2.2:7013/");
+                }
+                else
+                {
+                    // ✅ MÓVIL REAL: HTTP en puerto 5240 con tu IP
+                    client.BaseAddress = new Uri("http://192.168.128.1:5240/");
+                }
 #else
-                client.BaseAddress = new Uri("https://localhost:7013/");
+                // ✅ WINDOWS: HTTP en localhost
+                client.BaseAddress = new Uri("http://localhost:5240/");
 #endif
-
-                // Autenticación básica por defecto
-                var credentials = "juan:123";
-                var byteArray = System.Text.Encoding.UTF8.GetBytes(credentials);
-                var base64Credentials = Convert.ToBase64String(byteArray);
-                client.DefaultRequestHeaders.Authorization =
-                    new AuthenticationHeaderValue("Basic", base64Credentials);
 
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.Timeout = TimeSpan.FromSeconds(30);
@@ -43,17 +46,14 @@ namespace GestionPeliculas
 #if DEBUG && ANDROID
                 return new HttpClientHandler
                 {
+                    // Necesario para HTTPS con certificado de desarrollo
                     ServerCertificateCustomValidationCallback =
                         HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
                 };
 #else
                 return new HttpClientHandler();
 #endif
-            })
-            .AddHttpMessageHandler<LoggingHttpHandler>(); // ✅ AÑADIDO
-
-            // Registrar servicios
-            builder.Services.AddSingleton<LoggingHttpHandler>();
+            });
 
             // Registrar páginas
             builder.Services.AddTransient<MainMenuPage>();
@@ -65,34 +65,13 @@ namespace GestionPeliculas
             builder.Services.AddTransient<OpcionesPage>();
             builder.Services.AddTransient<LoginPage>();
             builder.Services.AddTransient<PeliculasPage>();
+            builder.Services.AddTransient<DetallePeliculaPage>();
 
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
-        }
-    }
-
-    // ✅ NUEVO: Handler para logging HTTP
-    public class LoggingHttpHandler : DelegatingHandler
-    {
-        protected override async Task<HttpResponseMessage> SendAsync(
-            HttpRequestMessage request, CancellationToken cancellationToken)
-        {
-            System.Diagnostics.Debug.WriteLine($"➡️ Request: {request.Method} {request.RequestUri}");
-
-            if (request.Content != null)
-            {
-                var content = await request.Content.ReadAsStringAsync(cancellationToken);
-                System.Diagnostics.Debug.WriteLine($"📦 Body: {content}");
-            }
-
-            var response = await base.SendAsync(request, cancellationToken);
-
-            System.Diagnostics.Debug.WriteLine($"⬅️ Response: {(int)response.StatusCode} {response.StatusCode}");
-
-            return response;
         }
     }
 }

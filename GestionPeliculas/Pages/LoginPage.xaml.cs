@@ -30,18 +30,17 @@ public partial class LoginPage : ContentPage
         try
         {
             var ok = await _service.AuthenticateAsync(user, pass);
+
             if (!ok)
             {
                 await DisplayAlert("Acceso denegado", "Credenciales incorrectas", "OK");
                 return;
             }
 
-            // Navegar a MainMenuPage
             var main = _services.GetService(typeof(MainMenuPage)) as Page;
             if (main != null)
             {
                 await Navigation.PushAsync(main);
-                // Eliminar LoginPage de la pila de navegación
                 Navigation.RemovePage(this);
             }
         }

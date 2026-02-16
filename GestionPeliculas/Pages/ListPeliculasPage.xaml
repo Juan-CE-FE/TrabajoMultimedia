@@ -2,39 +2,48 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GestionPeliculas.Pages.ListPeliculasPage"
-             Title="Todas las películas">
+             Title="Películas">
 
     <CollectionView x:Name="ListaPeliculas"
                     ItemsLayout="VerticalList"
                     Margin="10">
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <Frame Padding="10" Margin="0,5" BorderColor="#ccc" CornerRadius="10">
-                    <Grid ColumnDefinitions="Auto, *">
-                        <!-- ÚNICO BINDING: PosterImage -->
+                <Frame Padding="10" 
+                       Margin="0,5" 
+                       BorderColor="#ddd" 
+                       CornerRadius="12"
+                       BackgroundColor="White">
+
+                    <Grid ColumnDefinitions="90, *">
+
+                        <!-- Imagen -->
                         <Image Grid.Column="0"
                                Source="{Binding PosterImage}"
                                WidthRequest="80"
                                HeightRequest="120"
-                               Aspect="AspectFill"
-                               VerticalOptions="Center" />
+                               Aspect="AspectFill"/>
 
+                        <!-- Título y botón -->
                         <VerticalStackLayout Grid.Column="1" 
-                                             Spacing="4" 
-                                             Padding="8,0,0,0" 
+                                             Spacing="10" 
+                                             Padding="10,0,0,0"
                                              VerticalOptions="Center">
+
                             <Label Text="{Binding Titulo}" 
-                                   FontSize="20" 
-                                   FontAttributes="Bold"/>
-                            <Label Text="{Binding Director}" 
-                                   FontSize="14" 
-                                   TextColor="Gray"/>
-                            <Label Text="{Binding Genero}" 
-                                   FontSize="14" 
-                                   TextColor="#555"/>
-                            <Label Text="{Binding AnhoLanzamiento}" 
-                                   FontSize="14" 
-                                   TextColor="#777"/>
+                                   FontSize="18" 
+                                   FontAttributes="Bold"
+                                   MaxLines="2"
+                                   LineBreakMode="WordWrap"/>
+
+                            <Button Text="🔍 Ver información completa" 
+                                    Clicked="OnVerInfoClicked"
+                                    CommandParameter="{Binding Id}"
+                                    BackgroundColor="#2196F3"
+                                    TextColor="White"
+                                    CornerRadius="8"
+                                    HeightRequest="40"
+                                    FontSize="13"/>
                         </VerticalStackLayout>
                     </Grid>
                 </Frame>

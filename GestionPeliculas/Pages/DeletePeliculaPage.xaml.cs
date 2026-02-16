@@ -34,4 +34,11 @@ public partial class DeletePeliculaPage : ContentPage
             await DisplayAlert("Error", ex.Message, "OK");
         }
     }
+
+    private async void OnCancelarClicked(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
+
+
 }

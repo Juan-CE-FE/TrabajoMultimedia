@@ -5,64 +5,154 @@
              Title="Menú Principal"
              Padding="20">
 
-    <VerticalStackLayout Spacing="16" VerticalOptions="CenterAndExpand">
-        <Label Text="🎬 Gestión de Películas" 
-               FontSize="24" 
-               HorizontalOptions="Center" 
-               FontAttributes="Bold"/>
+    <ScrollView>
+        <VerticalStackLayout Spacing="16" VerticalOptions="Center">
 
-        <Label Text="Selecciona una opción" 
-               HorizontalOptions="Center" 
-               TextColor="Gray"/>
+            <Label Text="🎬 Gestión de Películas" 
+                   FontSize="24" 
+                   HorizontalOptions="Center" 
+                   FontAttributes="Bold"/>
 
-        <BoxView HeightRequest="1" Color="#ccc" Margin="0,10"/>
+            <Label Text="Selecciona una opción" 
+                   HorizontalOptions="Center" 
+                   TextColor="Gray"/>
 
-        <!-- CRUD BÁSICO -->
-        <Button Text="📋 Ver todas las películas" 
-                Clicked="OnVerTodasClicked"
-                BackgroundColor="#2196F3"
-                TextColor="White"
-                CornerRadius="8"
-                HeightRequest="50"/>
+            <BoxView HeightRequest="1" Color="#ccc" Margin="0,10"/>
 
-        <Button Text="➕ Crear película" 
-                Clicked="OnCrearClicked"
-                BackgroundColor="#4CAF50"
-                TextColor="White"
-                CornerRadius="8"
-                HeightRequest="50"/>
+            <!-- CRUD BÁSICO -->
+            <Label Text="📋 CRUD de Películas" 
+                   FontSize="16" 
+                   FontAttributes="Bold"
+                   TextColor="#2196F3"/>
 
-        <Button Text="🔍 Obtener película por Id" 
-                Clicked="OnObtenerByIdClicked"
-                BackgroundColor="#FF9800"
-                TextColor="White"
-                CornerRadius="8"
-                HeightRequest="50"/>
+            <Button Text="📋 Ver todas las películas" 
+                    Clicked="OnVerTodasClicked"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    CornerRadius="8"
+                    HeightRequest="45"/>
 
-        <Button Text="✏️ Actualizar película" 
-                Clicked="OnActualizarClicked"
-                BackgroundColor="#9C27B0"
-                TextColor="White"
-                CornerRadius="8"
-                HeightRequest="50"/>
+            <Button Text="➕ Crear película" 
+                    Clicked="OnCrearClicked"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    CornerRadius="8"
+                    HeightRequest="45"/>
 
-        <Button Text="🗑️ Eliminar película" 
-                Clicked="OnEliminarClicked"
-                BackgroundColor="#F44336"
-                TextColor="White"
-                CornerRadius="8"
-                HeightRequest="50"/>
+            <Button Text="🔍 Obtener película por Id" 
+                    Clicked="OnObtenerByIdClicked"
+                    BackgroundColor="#FF9800"
+                    TextColor="White"
+                    CornerRadius="8"
+                    HeightRequest="45"/>
 
-        <BoxView HeightRequest="1" Color="#ccc" Margin="0,10"/>
+            <Button Text="✏️ Actualizar película" 
+                    Clicked="OnActualizarClicked"
+                    BackgroundColor="#9C27B0"
+                    TextColor="White"
+                    CornerRadius="8"
+                    HeightRequest="45"/>
 
-        <!-- OPCIONES AVANZADAS - AQUÍ ESTÁN TUS ENDPOINTS -->
-        <Button Text="🚀 Opciones Avanzadas (Exportar, Buscar, Posters)" 
-                Clicked="OnOpcionesClicked"
-                BackgroundColor="#673AB7"
-                TextColor="White"
-                CornerRadius="8"
-                HeightRequest="50"
-                FontAttributes="Bold"/>
-    </VerticalStackLayout>
+            <Button Text="🗑️ Eliminar película" 
+                    Clicked="OnEliminarClicked"
+                    BackgroundColor="#F44336"
+                    TextColor="White"
+                    CornerRadius="8"
+                    HeightRequest="45"/>
 
+            <BoxView HeightRequest="1" Color="#ccc" Margin="0,10"/>
+
+            <!-- BÚSQUEDAS -->
+            <Label Text="🔎 Búsquedas Avanzadas" 
+                   FontSize="16" 
+                   FontAttributes="Bold"
+                   TextColor="#9C27B0"/>
+
+            <!-- Género -->
+            <Frame CornerRadius="8" Padding="10" BorderColor="#E0E0E0">
+                <VerticalStackLayout Spacing="8">
+                    <HorizontalStackLayout Spacing="8">
+                        <Label Text="🎭" FontSize="20"/>
+                        <Label Text="Buscar por Género" FontSize="14" VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="8">
+                        <Entry x:Name="GeneroEntry" 
+                               Placeholder="Ej: Fantasía, Drama..." 
+                               WidthRequest="200"
+                               FontSize="14"/>
+                        <Button Text="Buscar" 
+                                Clicked="OnBuscarGeneroClicked"
+                                BackgroundColor="#9C27B0"
+                                TextColor="White"
+                                CornerRadius="6"
+                                WidthRequest="70"
+                                HeightRequest="40"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Año -->
+            <Frame CornerRadius="8" Padding="10" BorderColor="#E0E0E0">
+                <VerticalStackLayout Spacing="8">
+                    <HorizontalStackLayout Spacing="8">
+                        <Label Text="📅" FontSize="20"/>
+                        <Label Text="Buscar por Año" FontSize="14" VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="8">
+                        <Entry x:Name="AnhoEntry" 
+                               Placeholder="Ej: 2001, 1994..." 
+                               Keyboard="Numeric"
+                               WidthRequest="200"
+                               FontSize="14"/>
+                        <Button Text="Buscar" 
+                                Clicked="OnBuscarAnhoClicked"
+                                BackgroundColor="#9C27B0"
+                                TextColor="White"
+                                CornerRadius="6"
+                                WidthRequest="70"
+                                HeightRequest="40"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Director -->
+            <Frame CornerRadius="8" Padding="10" BorderColor="#E0E0E0">
+                <VerticalStackLayout Spacing="8">
+                    <HorizontalStackLayout Spacing="8">
+                        <Label Text="🎬" FontSize="20"/>
+                        <Label Text="Buscar por Director" FontSize="14" VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="8">
+                        <Entry x:Name="DirectorEntry" 
+                               Placeholder="Ej: Nolan, Spielberg..." 
+                               WidthRequest="200"
+                               FontSize="14"/>
+                        <Button Text="Buscar" 
+                                Clicked="OnBuscarDirectorClicked"
+                                BackgroundColor="#9C27B0"
+                                TextColor="White"
+                                CornerRadius="6"
+                                WidthRequest="70"
+                                HeightRequest="40"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <BoxView HeightRequest="1" Color="#ccc" Margin="0,10"/>
+
+            <!-- OPCIONES AVANZADAS -->
+            <Label Text="🚀 Opciones Avanzadas" 
+                   FontSize="16" 
+                   FontAttributes="Bold"
+                   TextColor="#673AB7"/>
+
+            <Button Text="📤 Exportar / Posters / Más opciones" 
+                    Clicked="OnOpcionesClicked"
+                    BackgroundColor="#673AB7"
+                    TextColor="White"
+                    CornerRadius="8"
+                    HeightRequest="45"
+                    FontAttributes="Bold"/>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

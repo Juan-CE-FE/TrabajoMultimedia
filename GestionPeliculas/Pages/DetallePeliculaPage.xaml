@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionPeliculas.Pages.DetallePeliculaPage"
+             Title="Detalle de Película"
+             BackgroundColor="#F5F5F5">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="15">
+
+            <!-- Imagen grande -->
+            <Frame CornerRadius="15" 
+                   Padding="10"
+                   BackgroundColor="White"
+                   BorderColor="#E0E0E0"
+                   HorizontalOptions="Center">
+                <Image x:Name="ImagenPoster" 
+                       WidthRequest="200"
+                       HeightRequest="280"
+                       Aspect="AspectFill"/>
+            </Frame>
+
+            <!-- ID -->
+            <Frame CornerRadius="12" Padding="15" BackgroundColor="#E3F2FD">
+                <HorizontalStackLayout Spacing="15">
+                    <Label Text="🆔" FontSize="24"/>
+                    <VerticalStackLayout>
+                        <Label Text="ID" FontSize="12" TextColor="#1976D2"/>
+                        <Label x:Name="IdLabel" FontSize="20" FontAttributes="Bold" TextColor="#1976D2"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Título -->
+            <Frame CornerRadius="12" Padding="15" BackgroundColor="White">
+                <HorizontalStackLayout Spacing="15">
+                    <Label Text="🎬" FontSize="24"/>
+                    <VerticalStackLayout>
+                        <Label Text="Título" FontSize="12" TextColor="#666"/>
+                        <Label x:Name="TituloLabel" FontSize="18" FontAttributes="Bold"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Director -->
+            <Frame CornerRadius="12" Padding="15" BackgroundColor="White">
+                <HorizontalStackLayout Spacing="15">
+                    <Label Text="🎭" FontSize="24"/>
+                    <VerticalStackLayout>
+                        <Label Text="Director" FontSize="12" TextColor="#666"/>
+                        <Label x:Name="DirectorLabel" FontSize="16"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Género y Año (2 columnas) -->
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+
+                <Frame Grid.Column="0" CornerRadius="12" Padding="15" BackgroundColor="White">
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="📅" FontSize="20"/>
+                        <VerticalStackLayout>
+                            <Label Text="Año" FontSize="11" TextColor="#666"/>
+                            <Label x:Name="AnhoLabel" FontSize="15"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <Frame Grid.Column="1" CornerRadius="12" Padding="15" BackgroundColor="White">
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="🎯" FontSize="20"/>
+                        <VerticalStackLayout>
+                            <Label Text="Género" FontSize="11" TextColor="#666"/>
+                            <Label x:Name="GeneroLabel" FontSize="15"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Frame>
+            </Grid>
+
+            <!-- Sinopsis -->
+            <Frame CornerRadius="12" Padding="15" BackgroundColor="White">
+                <VerticalStackLayout Spacing="10">
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="📝" FontSize="20"/>
+                        <Label Text="Sinopsis" FontSize="16" FontAttributes="Bold" TextColor="#333"/>
+                    </HorizontalStackLayout>
+                    <Label x:Name="SinopsisLabel" 
+                           FontSize="14" 
+                           TextColor="#555"
+                           LineBreakMode="WordWrap"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Ruta de imagen (opcional) -->
+            <Frame x:Name="RutaFrame" CornerRadius="12" Padding="15" BackgroundColor="#F5F5F5" IsVisible="False">
+                <VerticalStackLayout Spacing="5">
+                    <HorizontalStackLayout Spacing="8">
+                        <Label Text="🖼️" FontSize="16"/>
+                        <Label Text="Ruta de imagen" FontSize="13" FontAttributes="Bold" TextColor="#666"/>
+                    </HorizontalStackLayout>
+                    <Label x:Name="RutaImagenLabel" 
+                           FontSize="11" 
+                           TextColor="#777"
+                           LineBreakMode="WordWrap"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Botón volver -->
+            <Button Text="← Volver a la lista" 
+                    Clicked="OnVolverClicked"
+                    BackgroundColor="#757575"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="45"
+                    Margin="0,10"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -15,6 +15,7 @@ public partial class MainMenuPage : ContentPage
         _services = services;
     }
 
+    // CRUD
     private async void OnVerTodasClicked(object sender, EventArgs e)
     {
         var page = _services.GetService(typeof(ListPeliculasPage)) as Page;
@@ -45,6 +46,56 @@ public partial class MainMenuPage : ContentPage
         if (page != null) await Navigation.PushAsync(page);
     }
 
+    // BÚSQUEDAS
+    private async void OnBuscarGeneroClicked(object sender, EventArgs e)
+    {
+        var termino = GeneroEntry.Text?.Trim();
+        if (string.IsNullOrWhiteSpace(termino))
+        {
+            await DisplayAlert("Error", "Introduce un género", "OK");
+            return;
+        }
+
+        var page = new ListPeliculasPage(_service, "genero", termino);
+        await Navigation.PushAsync(page);
+        GeneroEntry.Text = string.Empty;
+    }
+
+    private async void OnBuscarAnhoClicked(object sender, EventArgs e)
+    {
+        var termino = AnhoEntry.Text?.Trim();
+        if (string.IsNullOrWhiteSpace(termino))
+        {
+            await DisplayAlert("Error", "Introduce un año", "OK");
+            return;
+        }
+
+        if (!int.TryParse(termino, out _))
+        {
+            await DisplayAlert("Error", "El año debe ser un número", "OK");
+            return;
+        }
+
+        var page = new ListPeliculasPage(_service, "anho", termino);
+        await Navigation.PushAsync(page);
+        AnhoEntry.Text = string.Empty;
+    }
+
+    private async void OnBuscarDirectorClicked(object sender, EventArgs e)
+    {
+        var termino = DirectorEntry.Text?.Trim();
+        if (string.IsNullOrWhiteSpace(termino))
+        {
+            await DisplayAlert("Error", "Introduce un director", "OK");
+            return;
+        }
+
+        var page = new ListPeliculasPage(_service, "director", termino);
+        await Navigation.PushAsync(page);
+        DirectorEntry.Text = string.Empty;
+    }
+
+    // OPCIONES AVANZADAS
     private async void OnOpcionesClicked(object sender, EventArgs e)
     {
         var page = _services.GetService(typeof(OpcionesPage)) as Page;

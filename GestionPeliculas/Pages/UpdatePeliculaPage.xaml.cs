@@ -55,6 +55,8 @@ public partial class UpdatePeliculaPage : ContentPage
             AnhoEntry.Text = p.AnhoLanzamiento.ToString();
             RutaImagenEntry.Text = p.RutaImagen;
             SinopsisEditor.Text = p.Sinopsis;
+
+            FormularioFrame.IsVisible = true;
         }
         catch (Exception ex)
         {
@@ -101,4 +103,14 @@ public partial class UpdatePeliculaPage : ContentPage
             await DisplayAlert("Error", ex.Message, "OK");
         }
     }
+
+    private async void OnVolverClicked(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
+
+    // En OnCargarClicked, después de cargar los datos:
+    
+
+
 }

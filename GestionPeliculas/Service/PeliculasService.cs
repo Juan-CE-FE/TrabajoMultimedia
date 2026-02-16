@@ -1,8 +1,13 @@
-﻿using GestionPeliculas.Model;
+﻿using System;
 using System.Net.Http;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
 using System.Net.Http.Json;
 using Newtonsoft.Json;
-using System.Text;
+using GestionPeliculas.Model;
+using Microsoft.Maui.Storage;
 
 namespace GestionPeliculas.Service
 {
@@ -13,6 +18,82 @@ namespace GestionPeliculas.Service
         public PeliculasService(HttpClient client)
         {
             _client = client;
+
+            // RESTAURAR AUTENTICACIÓN GUARDADA
+            RestaurarAutenticacion();
+        }
+
+        private void RestaurarAutenticacion()
+        {
+            try
+            {
+                var authHeader = Preferences.Get("AuthHeader", "");
+                if (!string.IsNullOrEmpty(authHeader))
+                {
+                    _client.DefaultRequestHeaders.Authorization =
+                        new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", authHeader);
+                    System.Diagnostics.Debug.WriteLine("🔐 Autenticación restaurada desde Preferences");
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error restaurando auth: {ex.Message}");
+            }
+        }
+
+        // ==================== AUTENTICACIÓN ====================
+
+        public void SetBasicAuth(string username, string password)
+        {
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                _client.DefaultRequestHeaders.Authorization = null;
+                Preferences.Remove("AuthHeader");
+                return;
+            }
+
+            var credentials = $"{username}:{password}";
+            var base64 = Convert.ToBase64String(Encoding.UTF8.GetBytes(credentials));
+
+            _client.DefaultRequestHeaders.Authorization =
+                new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", base64);
+
+            // GUARDAR EN PREFERENCES
+            Preferences.Set("AuthHeader", base64);
+
+            System.Diagnostics.Debug.WriteLine($"🔐 Auth establecida para: {username}");
+        }
+
+        public async Task<bool> AuthenticateAsync(string username, string password)
+        {
+            SetBasicAuth(username, password);
+
+            try
+            {
+                System.Diagnostics.Debug.WriteLine($"🔍 Verificando credenciales: {username}");
+
+                var response = await _client.GetAsync("api/peliculas");
+
+                System.Diagnostics.Debug.WriteLine($"📡 Login response: {(int)response.StatusCode}");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    System.Diagnostics.Debug.WriteLine("✅ Login exitoso - credenciales válidas");
+                    return true;
+                }
+
+                System.Diagnostics.Debug.WriteLine($"❌ Login falló: {response.StatusCode}");
+                _client.DefaultRequestHeaders.Authorization = null;
+                Preferences.Remove("AuthHeader");
+                return false;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"🚨 Error en login: {ex.Message}");
+                _client.DefaultRequestHeaders.Authorization = null;
+                Preferences.Remove("AuthHeader");
+                return false;
+            }
         }
 
         // ==================== CRUD ====================
@@ -21,19 +102,56 @@ namespace GestionPeliculas.Service
         {
             try
             {
-                var response = await _client.GetAsync("api/peliculas");
-                if (!response.IsSuccessStatusCode)
-                    return new List<Pelicula>();
+                System.Diagnostics.Debug.WriteLine("=========================================");
+                System.Diagnostics.Debug.WriteLine($"🔍 GetPeliculasAsync");
+                System.Diagnostics.Debug.WriteLine($"🌐 URL: {_client.BaseAddress}api/peliculas");
+                System.Diagnostics.Debug.WriteLine($"🔐 Auth Header: {_client.DefaultRequestHeaders.Authorization?.ToString() ?? "NO AUTH"}");
 
-                var json = await response.Content.ReadAsStringAsync();
-                var peliculas = JsonConvert.DeserializeObject<List<Pelicula>>(json) ?? new List<Pelicula>();
+                var response = await _client.GetAsync("api/peliculas");
+
+                System.Diagnostics.Debug.WriteLine($"📡 Código de respuesta: {(int)response.StatusCode} {response.StatusCode}");
+
+                var content = await response.Content.ReadAsStringAsync();
+                System.Diagnostics.Debug.WriteLine($"📦 Contenido: {content}");
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    System.Diagnostics.Debug.WriteLine($"❌ Error: {response.StatusCode} - {content}");
+
+                    // SI ES 401, INTENTAR RESTAURAR AUTENTICACIÓN
+                    if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                    {
+                        System.Diagnostics.Debug.WriteLine("🔐 401 detectado - intentando restaurar auth...");
+                        RestaurarAutenticacion();
+
+                        // REINTENTAR
+                        response = await _client.GetAsync("api/peliculas");
+                        content = await response.Content.ReadAsStringAsync();
+
+                        if (response.IsSuccessStatusCode)
+                        {
+                            System.Diagnostics.Debug.WriteLine("✅ Restauración exitosa");
+                        }
+                        else
+                        {
+                            return new List<Pelicula>();
+                        }
+                    }
+                    else
+                    {
+                        return new List<Pelicula>();
+                    }
+                }
+
+                var peliculas = JsonConvert.DeserializeObject<List<Pelicula>>(content) ?? new List<Pelicula>();
+                System.Diagnostics.Debug.WriteLine($"✅ {peliculas.Count} películas recibidas");
 
                 await AsegurarUrlsImagenes(peliculas);
                 return peliculas;
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"Error GetPeliculasAsync: {ex}");
+                System.Diagnostics.Debug.WriteLine($"🚨 Error: {ex.Message}");
                 return new List<Pelicula>();
             }
         }
@@ -42,24 +160,65 @@ namespace GestionPeliculas.Service
         {
             try
             {
-                var response = await _client.GetAsync($"api/peliculas/{id}");
-                if (!response.IsSuccessStatusCode)
-                    return null;
+                System.Diagnostics.Debug.WriteLine("=========================================");
+                System.Diagnostics.Debug.WriteLine($"🔍 GetPeliculaAsync ID: {id}");
+                System.Diagnostics.Debug.WriteLine($"🌐 URL: {_client.BaseAddress}api/peliculas/{id}");
+                System.Diagnostics.Debug.WriteLine($"🔐 Auth Header: {_client.DefaultRequestHeaders.Authorization?.ToString() ?? "NO AUTH"}");
 
-                var json = await response.Content.ReadAsStringAsync();
-                var pelicula = JsonConvert.DeserializeObject<Pelicula>(json);
+                var response = await _client.GetAsync($"api/peliculas/{id}");
+
+                System.Diagnostics.Debug.WriteLine($"📡 Código de respuesta: {(int)response.StatusCode} {response.StatusCode}");
+
+                var content = await response.Content.ReadAsStringAsync();
+                System.Diagnostics.Debug.WriteLine($"📦 Contenido: {content}");
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    System.Diagnostics.Debug.WriteLine($"❌ Error: {response.StatusCode} - {content}");
+
+                    // SI ES 401, INTENTAR RESTAURAR AUTENTICACIÓN
+                    if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                    {
+                        System.Diagnostics.Debug.WriteLine("🔐 401 detectado - intentando restaurar auth...");
+                        RestaurarAutenticacion();
+
+                        // REINTENTAR
+                        response = await _client.GetAsync($"api/peliculas/{id}");
+                        content = await response.Content.ReadAsStringAsync();
+
+                        if (response.IsSuccessStatusCode)
+                        {
+                            System.Diagnostics.Debug.WriteLine("✅ Restauración exitosa");
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+
+                var pelicula = JsonConvert.DeserializeObject<Pelicula>(content);
 
                 if (pelicula != null)
+                {
+                    System.Diagnostics.Debug.WriteLine($"✅ Película encontrada: {pelicula.Titulo}");
                     await AsegurarUrlsImagenes(new List<Pelicula> { pelicula });
+                }
 
                 return pelicula;
             }
-            catch
+            catch (Exception ex)
             {
+                System.Diagnostics.Debug.WriteLine($"🚨 Error: {ex.Message}");
                 return null;
             }
         }
 
+        // RESTO DE MÉTODOS (Crear, Actualizar, Eliminar, Búsquedas, Posters, Exportaciones)
         public async Task<bool> CrearPeliculaAsync(Pelicula pelicula)
         {
             try
@@ -98,8 +257,6 @@ namespace GestionPeliculas.Service
                 return false;
             }
         }
-
-        // ==================== BÚSQUEDAS ====================
 
         public async Task<List<Pelicula>> SearchByGeneroAsync(string genero)
         {
@@ -155,8 +312,6 @@ namespace GestionPeliculas.Service
             }
         }
 
-        // ==================== GESTIÓN DE PÓSTERS ====================
-
         public async Task<bool> UploadPosterAsync(int id, Stream imageStream, string fileName)
         {
             try
@@ -193,8 +348,6 @@ namespace GestionPeliculas.Service
             }
         }
 
-        // ==================== EXPORTACIONES ====================
-
         public async Task<byte[]?> ExportarJsonAsync()
         {
             try
@@ -220,43 +373,6 @@ namespace GestionPeliculas.Service
                 return null;
             }
         }
-
-        // ==================== AUTENTICACIÓN ====================
-
-        public void SetBasicAuth(string username, string password)
-        {
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
-            {
-                _client.DefaultRequestHeaders.Authorization = null;
-                return;
-            }
-
-            var credentials = $"{username}:{password}";
-            var base64 = Convert.ToBase64String(Encoding.UTF8.GetBytes(credentials));
-            _client.DefaultRequestHeaders.Authorization =
-                new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", base64);
-        }
-
-        public async Task<bool> AuthenticateAsync(string username, string password)
-        {
-            SetBasicAuth(username, password);
-            try
-            {
-                var response = await _client.GetAsync("api/peliculas");
-                if (response.IsSuccessStatusCode)
-                    return true;
-
-                _client.DefaultRequestHeaders.Authorization = null;
-                return false;
-            }
-            catch
-            {
-                _client.DefaultRequestHeaders.Authorization = null;
-                return false;
-            }
-        }
-
-        // ==================== UTILIDADES ====================
 
         private async Task AsegurarUrlsImagenes(IEnumerable<Pelicula> peliculas)
         {

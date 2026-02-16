@@ -2,12 +2,84 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GestionPeliculas.Pages.DeletePeliculaPage"
-             Title="Eliminar Pelicula"
-             Padding="10">
+             Title="Eliminar Película"
+             BackgroundColor="#F5F5F5">
 
-    <VerticalStackLayout Spacing="12">
-        <Entry x:Name="IdEntry" Placeholder="Id" Keyboard="Numeric" />
-        <Button Text="Eliminar" Clicked="OnEliminarClicked" />
-    </VerticalStackLayout>
+	<ScrollView>
+		<VerticalStackLayout Spacing="20" Padding="20">
 
+			<!-- Encabezado -->
+			<Frame CornerRadius="15"
+                   BackgroundColor="#F44336"
+                   Padding="25"
+                   BorderColor="Transparent">
+				<VerticalStackLayout Spacing="5" HorizontalOptions="Center">
+					<Label Text="🗑️ ELIMINAR PELÍCULA"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           HorizontalOptions="Center"/>
+					<Label Text="Esta acción no se puede deshacer"
+                           FontSize="14"
+                           TextColor="White"
+                           Opacity="0.9"
+                           HorizontalOptions="Center"/>
+				</VerticalStackLayout>
+			</Frame>
+
+			<!-- Formulario de eliminación -->
+			<Frame CornerRadius="15"
+                   BackgroundColor="White"
+                   Padding="25"
+                   BorderColor="#E0E0E0">
+				<VerticalStackLayout Spacing="20">
+
+					<!-- Icono de advertencia -->
+					<Label Text="⚠️"
+                           FontSize="50"
+                           HorizontalOptions="Center"/>
+
+					<Label Text="Introduce el ID de la película que deseas eliminar"
+                           FontSize="15"
+                           TextColor="#666"
+                           HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"/>
+
+					<!-- Campo ID -->
+					<Frame BackgroundColor="#FFF3E0"
+                           CornerRadius="10"
+                           Padding="0"
+                           BorderColor="#FFCC80"
+                           HeightRequest="60">
+						<Entry x:Name="IdEntry"
+                               Placeholder="ID de la película"
+                               Keyboard="Numeric"
+                               BackgroundColor="Transparent"
+                               Margin="15,0"
+                               FontSize="18"
+                               HorizontalTextAlignment="Center"/>
+					</Frame>
+
+					<!-- Botón eliminar -->
+					<Button Text="🗑️ ELIMINAR"
+                            Clicked="OnEliminarClicked"
+                            BackgroundColor="#F44336"
+                            TextColor="White"
+                            CornerRadius="10"
+                            HeightRequest="55"
+                            FontSize="16"
+                            FontAttributes="Bold"/>
+
+					<!-- Botón cancelar -->
+					<Button Text="← CANCELAR"
+                            Clicked="OnCancelarClicked"
+                            BackgroundColor="#9E9E9E"
+                            TextColor="White"
+                            CornerRadius="10"
+                            HeightRequest="45"
+                            FontSize="14"/>
+				</VerticalStackLayout>
+			</Frame>
+		</VerticalStackLayout>
+	</ScrollView>
 </ContentPage>

@@ -3,31 +3,154 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GestionPeliculas.Pages.GetByIdPage"
              Title="Obtener por Id"
-             Padding="10">
+             Padding="15"
+             BackgroundColor="#F5F5F5">
 
-	<VerticalStackLayout Spacing="12">
-		<Entry x:Name="IdEntry" Placeholder="Id" Keyboard="Numeric" />
-		<Button Text="Obtener" Clicked="OnObtenerClicked" />
+    <ScrollView>
+        <VerticalStackLayout Spacing="15">
 
-		<Frame Padding="10" CornerRadius="8" BorderColor="#ccc">
-			<ScrollView HeightRequest="300">
-				<VerticalStackLayout Spacing="8">
-					<Label x:Name="TituloLabel" FontAttributes="Bold" FontSize="16" />
-					<Label x:Name="DirectorLabel" />
-					<Label x:Name="GeneroLabel" />
-					<Label x:Name="AnhoLabel" />
-					<Label x:Name="SinopsisLabel"
-                           Text="Sinopsis: "
-                           IsVisible="False"
-                           x:FieldModifier="public"/>
+            <!-- Input ID -->
+            <Frame CornerRadius="12" 
+                   BackgroundColor="White" 
+                   Padding="15"
+                   BorderColor="#E0E0E0">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="ID de la película:" 
+                           FontSize="14" 
+                           FontAttributes="Bold"/>
+                    <HorizontalStackLayout Spacing="10">
+                        <Entry x:Name="IdEntry" 
+                               Placeholder="Ej: 23" 
+                               Keyboard="Numeric"
+                               BackgroundColor="#F9F9F9"
+                               FontSize="16"
+                               WidthRequest="200"/>
+                        <Button Text="Obtener" 
+                                Clicked="OnObtenerClicked"
+                                BackgroundColor="#2196F3"
+                                TextColor="White"
+                                CornerRadius="8"
+                                WidthRequest="80"
+                                HeightRequest="45"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
 
-					<Label x:Name="RutaImagenLabel"
-                           Text="Imagen: "
-                           IsVisible="False"
-                           x:FieldModifier="public"/>
-				</VerticalStackLayout>
-			</ScrollView>
-		</Frame>
-	</VerticalStackLayout>
+            <!-- Resultados (solo visible cuando hay datos) -->
+            <Frame x:Name="ResultadosFrame" 
+                   CornerRadius="12" 
+                   BackgroundColor="White" 
+                   Padding="15"
+                   BorderColor="#E0E0E0"
+                   IsVisible="False">
 
+                <VerticalStackLayout Spacing="15">
+
+                    <!-- Título -->
+                    <Label Text="📋 Detalles de la Película" 
+                           FontSize="18" 
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"/>
+
+                    <!-- Imagen -->
+                    <Frame CornerRadius="10" 
+                           Padding="5"
+                           BackgroundColor="#F5F5F5"
+                           HorizontalOptions="Center">
+                        <Image x:Name="ImagenPoster" 
+                               WidthRequest="120"
+                               HeightRequest="160"
+                               Aspect="AspectFill"/>
+                    </Frame>
+
+                    <!-- Información en tarjetas -->
+
+                    <!-- ID -->
+                    <Frame CornerRadius="8" Padding="12" BackgroundColor="#F0F7FF">
+                        <HorizontalStackLayout Spacing="10">
+                            <Label Text="🆔" FontSize="20"/>
+                            <VerticalStackLayout>
+                                <Label Text="ID" FontSize="12" TextColor="#666"/>
+                                <Label x:Name="IdLabel" FontSize="16" FontAttributes="Bold" TextColor="#2196F3"/>
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+                    </Frame>
+
+                    <!-- Título -->
+                    <Frame CornerRadius="8" Padding="12" BackgroundColor="#F5F5F5">
+                        <HorizontalStackLayout Spacing="10">
+                            <Label Text="🎬" FontSize="20"/>
+                            <VerticalStackLayout>
+                                <Label Text="Título" FontSize="12" TextColor="#666"/>
+                                <Label x:Name="TituloLabel" FontSize="16" FontAttributes="Bold"/>
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+                    </Frame>
+
+                    <!-- Director -->
+                    <Frame CornerRadius="8" Padding="12" BackgroundColor="#F5F5F5">
+                        <HorizontalStackLayout Spacing="10">
+                            <Label Text="🎭" FontSize="20"/>
+                            <VerticalStackLayout>
+                                <Label Text="Director" FontSize="12" TextColor="#666"/>
+                                <Label x:Name="DirectorLabel" FontSize="15"/>
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+                    </Frame>
+
+                    <!-- Género y Año (dos columnas) -->
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+
+                        <Frame Grid.Column="0" CornerRadius="8" Padding="12" BackgroundColor="#F5F5F5">
+                            <HorizontalStackLayout Spacing="10">
+                                <Label Text="📅" FontSize="20"/>
+                                <VerticalStackLayout>
+                                    <Label Text="Año" FontSize="12" TextColor="#666"/>
+                                    <Label x:Name="AnhoLabel" FontSize="15"/>
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                        </Frame>
+
+                        <Frame Grid.Column="1" CornerRadius="8" Padding="12" BackgroundColor="#F5F5F5">
+                            <HorizontalStackLayout Spacing="10">
+                                <Label Text="🎯" FontSize="20"/>
+                                <VerticalStackLayout>
+                                    <Label Text="Género" FontSize="12" TextColor="#666"/>
+                                    <Label x:Name="GeneroLabel" FontSize="15"/>
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <!-- Sinopsis -->
+                    <Frame CornerRadius="8" Padding="12" BackgroundColor="#F5F5F5">
+                        <VerticalStackLayout Spacing="5">
+                            <HorizontalStackLayout Spacing="10">
+                                <Label Text="📝" FontSize="20"/>
+                                <Label Text="Sinopsis" FontSize="14" FontAttributes="Bold" TextColor="#666"/>
+                            </HorizontalStackLayout>
+                            <Label x:Name="SinopsisLabel" 
+                                   FontSize="14" 
+                                   TextColor="#333"
+                                   LineBreakMode="WordWrap"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!-- Ruta Imagen -->
+                    <Frame CornerRadius="8" Padding="12" BackgroundColor="#F5F5F5">
+                        <VerticalStackLayout Spacing="5">
+                            <HorizontalStackLayout Spacing="10">
+                                <Label Text="🖼️" FontSize="20"/>
+                                <Label Text="Ruta de imagen" FontSize="14" FontAttributes="Bold" TextColor="#666"/>
+                            </HorizontalStackLayout>
+                            <Label x:Name="RutaImagenLabel" 
+                                   FontSize="12" 
+                                   TextColor="#777"
+                                   LineBreakMode="WordWrap"/>
+                        </VerticalStackLayout>
+                    </Frame>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

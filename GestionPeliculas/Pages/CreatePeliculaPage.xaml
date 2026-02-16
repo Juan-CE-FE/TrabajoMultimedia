@@ -2,17 +2,178 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GestionPeliculas.Pages.CreatePeliculaPage"
-             Title="Crear Pelicula"
-             Padding="10">
+             Title="Nueva Película"
+             BackgroundColor="#F5F5F5">
 
-    <VerticalStackLayout Spacing="12">
-        <Entry x:Name="TituloEntry" Placeholder="Titulo" />
-        <Entry x:Name="DirectorEntry" Placeholder="Director" />
-        <Entry x:Name="GeneroEntry" Placeholder="Genero" />
-        <Entry x:Name="AnhoEntry" Placeholder="Anho" Keyboard="Numeric" />
-        <Entry x:Name="RutaImagenEntry" Placeholder="Ruta imagen (URL)" />
-        <Editor x:Name="SinopsisEditor" Placeholder="Sinopsis" AutoSize="TextChanges" HeightRequest="100" />
-        <Button Text="Crear" Clicked="OnCrearClicked" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
 
+            <!-- Encabezado -->
+            <Frame CornerRadius="15" 
+                   BackgroundColor="#4CAF50" 
+                   Padding="20"
+                   BorderColor="Transparent">
+                <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
+                    <Label Text="➕ NUEVA PELÍCULA" 
+                           FontSize="22" 
+                           FontAttributes="Bold" 
+                           TextColor="White"
+                           HorizontalOptions="Center"/>
+                    <Label Text="Completa los datos de la película" 
+                           FontSize="14" 
+                           TextColor="White" 
+                           Opacity="0.9"
+                           HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Formulario -->
+            <Frame CornerRadius="15" 
+                   BackgroundColor="White" 
+                   Padding="20"
+                   BorderColor="#E0E0E0">
+                <VerticalStackLayout Spacing="15">
+
+                    <!-- Título -->
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="🎬 Título" 
+                               FontSize="14" 
+                               FontAttributes="Bold" 
+                               TextColor="#333"/>
+                        <Frame BackgroundColor="#F9F9F9" 
+                               CornerRadius="10" 
+                               Padding="0"
+                               BorderColor="#E0E0E0"
+                               HeightRequest="50">
+                            <Entry x:Name="TituloEntry" 
+                                   Placeholder="Ej: El Padrino"
+                                   BackgroundColor="Transparent"
+                                   Margin="15,0"
+                                   FontSize="15"/>
+                        </Frame>
+                    </VerticalStackLayout>
+
+                    <!-- Director -->
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="🎭 Director" 
+                               FontSize="14" 
+                               FontAttributes="Bold" 
+                               TextColor="#333"/>
+                        <Frame BackgroundColor="#F9F9F9" 
+                               CornerRadius="10" 
+                               Padding="0"
+                               BorderColor="#E0E0E0"
+                               HeightRequest="50">
+                            <Entry x:Name="DirectorEntry" 
+                                   Placeholder="Ej: Francis Ford Coppola"
+                                   BackgroundColor="Transparent"
+                                   Margin="15,0"
+                                   FontSize="15"/>
+                        </Frame>
+                    </VerticalStackLayout>
+
+                    <!-- Género y Año (2 columnas) -->
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="15">
+
+                        <!-- Género -->
+                        <VerticalStackLayout Grid.Column="0" Spacing="5">
+                            <Label Text="🎯 Género" 
+                                   FontSize="14" 
+                                   FontAttributes="Bold" 
+                                   TextColor="#333"/>
+                            <Frame BackgroundColor="#F9F9F9" 
+                                   CornerRadius="10" 
+                                   Padding="0"
+                                   BorderColor="#E0E0E0"
+                                   HeightRequest="50">
+                                <Entry x:Name="GeneroEntry" 
+                                       Placeholder="Ej: Drama"
+                                       BackgroundColor="Transparent"
+                                       Margin="15,0"
+                                       FontSize="15"/>
+                            </Frame>
+                        </VerticalStackLayout>
+
+                        <!-- Año -->
+                        <VerticalStackLayout Grid.Column="1" Spacing="5">
+                            <Label Text="📅 Año" 
+                                   FontSize="14" 
+                                   FontAttributes="Bold" 
+                                   TextColor="#333"/>
+                            <Frame BackgroundColor="#F9F9F9" 
+                                   CornerRadius="10" 
+                                   Padding="0"
+                                   BorderColor="#E0E0E0"
+                                   HeightRequest="50">
+                                <Entry x:Name="AnhoEntry" 
+                                       Placeholder="Ej: 1972"
+                                       Keyboard="Numeric"
+                                       BackgroundColor="Transparent"
+                                       Margin="15,0"
+                                       FontSize="15"/>
+                            </Frame>
+                        </VerticalStackLayout>
+                    </Grid>
+
+                    <!-- Ruta Imagen -->
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="🖼️ URL de imagen" 
+                               FontSize="14" 
+                               FontAttributes="Bold" 
+                               TextColor="#333"/>
+                        <Frame BackgroundColor="#F9F9F9" 
+                               CornerRadius="10" 
+                               Padding="0"
+                               BorderColor="#E0E0E0"
+                               HeightRequest="50">
+                            <Entry x:Name="RutaImagenEntry" 
+                                   Placeholder="Ej: https://ejemplo.com/poster.jpg"
+                                   BackgroundColor="Transparent"
+                                   Margin="15,0"
+                                   FontSize="14"/>
+                        </Frame>
+                    </VerticalStackLayout>
+
+                    <!-- Sinopsis -->
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="📝 Sinopsis" 
+                               FontSize="14" 
+                               FontAttributes="Bold" 
+                               TextColor="#333"/>
+                        <Frame BackgroundColor="#F9F9F9" 
+                               CornerRadius="10" 
+                               Padding="0"
+                               BorderColor="#E0E0E0"
+                               HeightRequest="120">
+                            <Editor x:Name="SinopsisEditor" 
+                                    Placeholder="Escribe la sinopsis de la película..."
+                                    BackgroundColor="Transparent"
+                                    Margin="10,5"
+                                    FontSize="14"
+                                    AutoSize="TextChanges"/>
+                        </Frame>
+                    </VerticalStackLayout>
+
+                    <!-- Botones -->
+                    <Button Text="✅ CREAR PELÍCULA" 
+                            Clicked="OnCrearClicked"
+                            BackgroundColor="#4CAF50"
+                            TextColor="White"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            FontSize="16"
+                            FontAttributes="Bold"
+                            Margin="0,10,0,0"/>
+
+                    <Button Text="← CANCELAR" 
+                            Clicked="OnCancelarClicked"
+                            BackgroundColor="#9E9E9E"
+                            TextColor="White"
+                            CornerRadius="10"
+                            HeightRequest="45"
+                            FontSize="14"/>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
