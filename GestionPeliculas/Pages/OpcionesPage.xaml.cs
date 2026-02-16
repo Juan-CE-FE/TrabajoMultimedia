@@ -48,11 +48,31 @@ public partial class OpcionesPage : ContentPage
             }
 
             var filename = $"peliculas_{DateTime.Now:yyyyMMddHHmmss}.{formato}";
-            var path = Path.Combine(FileSystem.AppDataDirectory, filename);
+
+#if ANDROID
+            // Pedir permisos de almacenamiento
+            var status = await Permissions.RequestAsync<Permissions.StorageWrite>();
+            if (status != PermissionStatus.Granted)
+            {
+                await DisplayAlert("Permiso", "Se necesita permiso de almacenamiento", "OK");
+                return;
+            }
+
+            // Guardar en Downloads
+            var downloads = Android.OS.Environment.GetExternalStoragePublicDirectory(
+                Android.OS.Environment.DirectoryDownloads).AbsolutePath;
+            var path = Path.Combine(downloads, filename);
+
             await File.WriteAllBytesAsync(path, data);
 
-            await DisplayAlert("✅ Exportación exitosa",
-                $"Archivo guardado en:\n{path}", "OK");
+            await DisplayAlert("Exportado correctament",
+                $"Archivo guardado en:\nDescargas/{filename}", "OK");
+#else
+        var path = Path.Combine(FileSystem.AppDataDirectory, filename);
+        await File.WriteAllBytesAsync(path, data);
+        await DisplayAlert("✅ Exportación exitosa",
+            $"Archivo guardado en:\n{path}", "OK");
+#endif
         }
         catch (Exception ex)
         {
